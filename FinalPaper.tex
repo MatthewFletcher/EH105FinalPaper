@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+
+%
+%Margin - 1 inch on all sides
+%
+\usepackage[letterpaper]{geometry}
+\usepackage{times}
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+
+%
+%Doublespacing
+%
+\usepackage{setspace}
+\doublespacing
+
+%
+%Rotating tables (e.g. sideways when too long)
+%
+\usepackage{rotating}
+
+
+%
+%Fancy-header package to modify header/page numbering (insert last name)
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{} 
+\chead{} 
+\rhead{Fletcher \thepage} 
+\lfoot{} 
+\cfoot{} 
+\rfoot{} 
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt} 
+%To make sure we actually have header 0.5in away from top edge
+%12pt is one-sixth of an inch. Subtract this from 0.5in to get headsep value
+\setlength\headsep{0.333in}
+
+%
+%Works cited environment
+%(to start, use \begin{workscited...}, each entry preceded by \bibent)
+% - from Ryan Alcock's MLA style file
+%
+\newcommand{\bibent}{\noindent \hangindent 40pt}
+\newenvironment{workscited}{\newpage \begin{center} Works Cited \end{center}}{\newpage }
+
+
+%
+%Begin document
+%
+\begin{document}
+\begin{flushleft}
+
+%%%%First page name, class, etc
+Matt Fletcher\\
+Dr Gaines Hubbell\\
+EH105\\
+TODO Date\\
+
+
+%%%%Title
+\begin{center}
+Unintended Effects of the Development of Quantum Computing on NP-Difficult Problems and the RSA Encryption Algorithm
+\end{center}
+
+
+%%%%Changes paragraph indentation to 0.5in
+\setlength{\parindent}{0.5in}
+%%%%Begin body of paper here
+
+
+
+In 1955, mathematician John Nash penned a letter to the National Security Agency that would change the face of computing forever. In this letter, he presented a theory about the computational power required to solve different types of math problems. In particular, he focused on the art of cryptography, and the length of time necessary to crack an encryption. Up to that point, computer scientists who created algorithms focused on the required time to solve a particular length of problem. Nash suggested that instead of focusing on the length of time necessary to solve a problem of a particular length, scientists should instead focus on the rate of difficulty growth of the problem required to solve a problem as the length of the inputs grew at a linear rate. Furthermore, instead of focusing on computation time, a scientist should focus on number of computational steps required to solve the problem. A computational step is the number of state changes that the machine goes through in carrying out the set of steps to solve the problem. The shape of this growth curve would help classify the difficulty of the problem. For example, addition of numbers is a problem with linear growth. Doubling the number of digits to be added results in approximately double the computation time. However, problems such as multiplication grow at a slightly faster pace. Doubling the length of the inputs results in a growth of 22 times the number of computational steps. Tripling it results in a growth of 32 times the number of computational steps. Although this may seem like a fast growth, this is actually growing in what is known as “polynomial time”. The exponent of the growth rate is always constant. Polynomial growth can always be displayed as some combination of terms nk, where n is a variable and k is a constant. There is one more type of problem, however. Take for example cracking a password. For simplicity sake, assume the password is a PIN composed only of digits 0-9. In the worst case scenario, for a 1 digit PIN, the computer would take 10 guesses. For a 2 digit PIN, the computer would take $10^2$ guesses. For a 4 digit pin, the computer would take $10^4$ guesses. This is growing at a rate of $10^k$, where k is some constant. This is known as exponential growth, where the variable is in the exponent. This curve is extremely sharp. For context, if a password was able to consist of any numbers, letters, or special characters on a standard US keyboard, with only an 8 digit password, the number of computational steps required skyrockets up to $82^8$, or 2 with fifteen zeros following it. 
+
+
+Mathematicians had been noticing problems like this popping up all over in all fields. So, they decided to classify these problems. If a problem could be solved in a polynomial amount of time, it was classified as difficulty P. Problems with difficulty P are both easy to solve, and easy to verify that the calculated answer is correct. 
+Problems classified as NP are slightly different. NP stands for Nondeterministic Polynomial time. NP problems are difficult to solve, but easy to check a solution to. One of the most common examples of an NP problem is finding a subset of a list that satisfies a given requirement. This is often referred to as the hackey sack problem. If someone is given a collection of small sacks with given random weights, they are given the goal of finding a subset of those sacks that results in a given weight. The only way to approach this problem with current methods is a brute force algorithm, guessing a random subset, and checking the result. Yet another example of an NP problem is the factoring of a number into its prime factors. The Greek mathematician Euclid TODO CHECK NAME first said back in 300BC that any number has exactly 1 prime factorization. It is extremely easy to check if a given factorization for a number is correct (the multiplication of said numbers is a P-difficulty problem). However, in order to find the unique factorization for a number, the only known method currently is a brute force approach, trying every single factor for that number. As the length of the target number grows, so does the length of computation time, but the computation time grows exponentially. As the growth of computation time is not of a polynomial form, the factorization problem is considered an NP-difficulty problem. But what application does this have in the real world?
+
+
+When an online shopper enters their credit card details on an online store, they know their credit card details are safe if they see the little green lock icon in their URL bar. Less known is the fact that the only reason this lock icon exists is due to prime factorization being an NP problem. It all lies in the difficulty of RSA encryption. In 1978, three computer scientists, Ron Rivest, Adi Shamir and Leonard Adleman, publicly released an encryption algorithm titled after their names, RSA. The basis of this encryption technique is two secret prime numbers (known as private keys) multiplied together, to form a public key. It is extremely easy to check whether the two numbers multiplied together result in the public key. However, in order to find the public key, the only way to approach is through a brute force approach. For an idea of size, the public key is TODO characters long. In order to brute force this, with current calculation  methods, it would take somewhere on the order of TODO years to brute force the hash. 
+
+
+Throughout this paper, I keep referring to the phrase ``with current methods'' in context of methods used to solve a problem. What I mean by this is the use of what is known as a Turing computer to solve a problem. A Turing computer the most basic computer possible, which takes in bits one at a time, and outputs a result based on the bit. These computers are named after Alan Turing, a TODO from TODO. These computers are powerful. However, they fail when it comes to NP problems. As NP problems grow with non-polynomial growth, the computation time grows quickly to an unmanageable amount. However, this will change with the introduction of quantum computers. 
+All modern day computers operate off of a common piece of electrical circuitry known as the transistor. A transistor is a micro-switch that can read either 1 (for on) or 0 (for off). They will exist in exactly one of these states at any given time. By combining these transistors into logical gates, they can perform basic functions. This is the basis of a computer. 
+A quantum computer operates off of a slightly different principle. Instead of operating off of a physical piece of hardware (the transistor) that produces a bit, they operate off of observation of a photon that represents a qubit. A qubit is a bit that can either represent a 1, a 0, or a superposition of a 1 and a 0. How can something exist in both a 1 or a 0? To understand this, one must first understand the principle behind Schr\"{o}dinger’s cat. 
+
+
+The infamous Schr\"{o}dinger's cat experiment is performed as follows. Imagine a living cat inside a sealed bunker, with a sealed beaker of poisonous material, a Geiger counter attached to a hammer, and a small piece of radioactive material. The radioactive material has a 50\% chance of having one of its atoms decay (which would set off the Geiger counter, smashing the hammer into the vial of gas and releasing it into the bunker. As long as the bunker is sealed an unobserved, the cat has a fifty percent chance of being dead and a fifty percent chance of being alive. When the bunker is opened, however, the cat must either be dead or alive. It can no longer be 
+
+ 
+\newpage
+
+
+
+
+%%%%Works cited
+\begin{workscited}
+
+\bibent
+Allen, R.L. \textit{The American Farm Book; or Compend of Ameri can Agriculture; Being a Practical Treatise on Soils, Manures, Draining, Irrigation, Grasses, Grain, Roots, Fruits, Cotton, Tobacco, Sugar Cane, Rice, and Every Staple Product of the United States with the Best Methods of Planting, Cultivating, and Prep aration for Market.} New York: Saxton, 1849. Print.
+
+\bibent
+Baker, Gladys L., Wayne D. Rasmussen, Vivian Wiser, and Jane M. Porter. \textit{Century of Service: The First 100 Years of the United States Department of Agriculture.}[Federal Government], 1996. Print.
+
+\bibent
+Danhof, Clarence H. \textit{Change in Agriculture: The Northern United States, 1820-1870.} Cambridge: Harvard UP, 1969. Print.
+
+
+\end{workscited}
+
+\end{flushleft}
+\end{document}
+\}
