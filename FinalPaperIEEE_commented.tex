@@ -30,10 +30,16 @@
 % To go back to Times Roman, you can use this code:
 %\renewcommand{\rmdefault}{ptm}\selectfont
 
-%Custom Commands
+%CUSTOM COMMANDS
+
+%Combinatorial notation
+%From https://tex.stackexchange.com/questions/107125/is-there-a-command-to-write-the-form-of-a-combination-or-permutation
 \newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
 \newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
 
+%For inserting code
+\usepackage{listings}
+%https://www.sharelatex.com/learn/Code_listing
 
 % Some very useful LaTeX packages include:
 % (uncomment the ones you want to load)
@@ -573,7 +579,7 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 % in the abstract or keywords.
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-Since the 1980's, the RSA Encryption algorithm has been used as a near foolproof method of encrypting sensitive data sent over the Internet. It relies on the relatively slow computing power of modern day computers as well as prime factorization being an NP-TODO math problem TODO check which version of NP. However, with quantum computers on the horizon of being invented, many cryptologists worry about the safety of encrypted data. This paper analyzes why the safety of encryption has both increased and decreased over the age of computers. 
+Since the 1980's, the RSA Encryption algorithm has been used as a near foolproof method of encrypting sensitive data sent over the Internet. It relies on the relatively slow computing power of modern day computers as well as prime factorization being an NP- math problem TODO check which version of NP. However, with quantum computers on the horizon of being invented, many cryptologists worry about the safety of encrypted data. This paper analyzes why the safety of encryption has both increased and decreased over the age of computers. 
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -648,7 +654,7 @@ In this letter, he presented a theory about the computational power required to 
 However, there is additional class of problem. Take for example cracking a password. For simplicity sake, assume the password is a PIN composed only of digits 0-9. In the worst case scenario, for a 1 digit PIN, the computer would take $10^1=10$ guesses. For a 2 digit PIN, the computer would take $10^2 = 100$ guesses. For a 4 digit pin, the computer would take $10^4=10\,000$ guesses. This is growing at a rate of $10^k$, where k is some constant. This growth pattern is known as exponential growth, where the variable is in the exponent. The resultant curve is extremely sharp. For context, if a password was able to consist of any numbers, letters, or special characters on a standard US keyboard, with only an eight character password, the number of computational steps required skyrockets up to $82^8$, or 2 with fifteen zeros following it. 
 
 \subsection{Classifying P and NP Problems}
-Mathematicians had been noticing problems with similar growth patterns in all different fields of math and science. So, they decided to classify these problems. The first type is known as a problem with difficulty P. To find the largest number in a list of numbers, a computer must iterate through each element in the list of numbers one time\footnote{For each element in the list, check if it's larger than the previous element. If it is, store that value as the largest value.}. Assume this uses $n$ computational steps. If the length of the list is doubled, the computer must go through $2n$ steps, or double the number of steps, in order to determine the largest element in the list. Tripling the length results in $3n$ computational steps. Therefore, increasing the list from $n$ elements to $k\cdot n $ elements will result in having to use $k$ times the number of computational steps. This increase results in a linear growth. By computer standards, this is considered a slow growth. Mathemeticians decided to classify these problems as type P problems, as they could be solved in  \textbf{P}olynomial time. Not only are these problems easy to solve, but they are also easy to confirm if a potential solution is correct. 
+Mathematicians had been noticing problems with similar growth patterns in all different fields of math and science. So, they decided to classify these problems. The first type is known as a problem with difficulty P. To find the largest number in a list of numbers, a computer must iterate through each element in the list of numbers one time\footnote{For each element in the list, check if it's larger than the previous element. If it is, store that value as the largest value.}. Assume this uses $n$ computational steps. If the length of the list is doubled, the computer must go through $2n$ steps, or double the number of steps, in order to determine the largest element in the list. Tripling the length results in $3n$ computational steps. Therefore, increasing the list from $n$ elements to $k\cdot n $ elements will result in having to use $k$ times the number of computational steps\footnote{A sample Python script is in Appendix A.}. This increase results in a linear growth. By computer standards, this is considered a slow growth. Mathemeticians decided to classify these problems as type P problems, as they could be solved in  \textbf{P}olynomial time. Not only are these problems easy to solve, but they are also easy to confirm if a potential solution is correct. 
 
 Problems classified as NP are slightly different. However, ``Nondeterministic Polynomial time problems'' (also known as NP problems) are difficult to solve, but easy to check a solution to in polynomial time\footnote{``Easy'' and ``difficult'' in this case mean that they are respectively solvable and not solvable by a computer in a reasonable amount of time.}. One of the most common examples of an NP problem is finding a subset of a list that satisfies a given requirement. This is often referred to as the hackey-sack problem. If someone is presented with a collection of small sacks with specified random weights, and then asked to find a subset of those sacks that result in a given weight, the only way to approach this problem with current computational methods is a brute force algorithm, guessing a random subset, and checking the result. Unlike the P-type problem of finding the largest number in a list, the number of computational steps required for this problem results in a much faster growth. Assume that initially, just 2 sacks are given. Call these $c_1$ and $c_2$. To figure out which combination yields the correct answer, one must try the following combinations:
 \begin{itemize}
@@ -796,7 +802,7 @@ The United States Military expresses a large amount of interest in quantum compu
 
 
 Another use of quantum computing arises in the use of autonmous vehicles and route generation. Finding the shortest route between a set of points is considered an NP-hard problem
-\footnote{A simple explanation behind this statement: To find the shortest route between a set of nodes $N_1,N_2,\cdots N_Q$ of size Q, start at any node $N_1$. At this point, $Q$ guesses have been checked. Now, there are $Q-1$ points left to try. After another point $N_2$ has been selected, $Q(Q-1)$ guesses have been attempted. After another point, the number of guesses goes to $Q(Q-1)(Q-2)$. This is increasing at a rate of $Q!$, which is a non polynomial growth. }.
+\footnote{See Appendix C }.
 %http://mathworld.wolfram.com/TravelingSalesmanProblem.html
 In math terms, this problem is attempting to find the most efficient Hamiltonian Cycle to take through a set of N nodes. This has a real life application, however; finding the shortest route between a set of points is nothing more than a navigation application such as Google Maps. TODO add more about use for autonomous vehicles. 
  
@@ -828,15 +834,43 @@ What about applications that could potentially save lives? Current meteorologica
 
 
 \appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
+\section{Sample Code for Largest Element}
+Assume the list of numbers is stored in a list named $num\_list$. The following is written in Python. Note how there is only 1 FOR loop.
+\begin{lstlisting}
+greatest_element = num_list[0]
+for element in num_list:
+	if element>greatest_element:
+		element = greatest_element
+return element
+
+\end{lstlisting}
 
 % you can choose not to have a title for an appendix
 % if you want by leaving the argument blank
+\section{Proof of iteration count for sacks}
+Start with a test case, then prove for a general solution. 
+Let the number of sacks in the initial collection be $4$. 
+
+To figure out the total possible number of sacks, use a case by case scenario. Every final count of sacks will either contain 1, 2, 3, or 4 sacks. 
+\begin{itemize}
+	\item \textbf{Case 1}, picking 4 sacks. \\
+	There are 4 possible choices for the first sack, 3 possible for the second, 2 for the third, and 1 for the fourth. Mathematically represented, there are $\Perm{4}{4} = 4! = 4\cdot3\cdot2\cdot1$ possible combinations. However, as the order the sacks are picked in does not matter, divide by $4!$. The mathematical represenatation of this compensation is $\Comb{4}{4}$. $$\frac{4!}{4!} = 1$$. This makes sense, because there's only 1 way to pick a collection of all 4 sacks. 
+	\item \textbf{Case 2}, picking 3 sacks.\\
+	With the same logic as the previous case, there are $\Perm{4}{3} = 4\cdot3\cdot2$  possible unordered combinations. However, each choice of 3 sacks can be arranged in $3!$ ways, so therefore divide the total number of collections $(4!)$ by the number of arrangements of each $(3!)$. $$\frac{4!}{3!} = \frac{24}{6} = 4$$.
+	\item \textbf{Case 3}, picking 2 sacks.\\
+	\[\Comb{4}{2} = \frac{\Perm{4}{2}}{2!} = 6\]
+	\item \textbf{Case 4}, picking 1 sack.\\
+	\[\Comb{4}{1} = \frac{\Perm{4}{1}}{1!} = 4\]
+	Adding each of these together results in $1+4+6+4 = 15$. 
+	
+	The number of possible combinations for each case is not a random number. These numbers actually come from the Binomial Coefficients of Pascal's Triangle. 
+\end{itemize}
+
+\section{Traveling Salesman NP Proof}
+A simple explanation behind this statement: To find the shortest route between a set of nodes $N_1,N_2,\cdots N_Q$ of size Q, start at any node $N_1$. At this point, $Q$ guesses have been checked. Now, there are $Q-1$ points left to try. After another point $N_2$ has been selected, $Q(Q-1)$ guesses have been attempted. After another point, the number of guesses goes to $Q(Q-1)(Q-2)$. This is increasing at a rate of $Q!$, which is a non polynomial growth.
+
 \section{}
-Appendix two text goes here.
-
-
+Insert Appendix text here
 % use section* for acknowledgment
 \ifCLASSOPTIONcompsoc
   % The Computer Society usually uses the plural form
@@ -890,45 +924,6 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
 
 % biography section
 % 
-% If you have an EPS/PDF photo (graphicx package needed) extra braces are
-% needed around the contents of the optional argument to biography to prevent
-% the LaTeX parser from getting confused when it sees the complicated
-% \includegraphics command within an optional argument. (You could create
-% your own custom macro containing the \includegraphics command to make things
-% simpler here.)
-%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
-% or if you just want to reserve a space for a photo:
-
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
-
-% if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% You can push biographies down or up by placing
-% a \vfill before or after them. The appropriate
-% use of \vfill depends on what kind of text is
-% on the last page and whether or not the columns
-% are being equalized.
-
-%\vfill
-
-% Can be used to pull up biographies so that the bottom of the last one
-% is flush with the other column.
-%\enlargethispage{-5in}
-
-
 
 % that's all folks
 \end{document}
