@@ -1,52 +1,6 @@
-%% bare_adv.tex
-%% V1.4b
-%% 2015/08/26
-%% by Michael Shell
-%% See: 
-%% http://www.michaelshell.org/
-%% for current contact information.
-%%
-%% This is a skeleton file demonstrating the advanced use of IEEEtran.cls
-%% (requires IEEEtran.cls version 1.8b or later) with an IEEE Computer
-%% Society journal paper.
-%%
-%% Support sites:
-%% http://www.michaelshell.org/tex/ieeetran/
-%% http://www.ctan.org/pkg/ieeetran
-%% and
-%% http://www.ieee.org/
-
-%%*************************************************************************
-%% Legal Notice:
-%% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE! 
-%% User assumes all risk.
-%% In no event shall the IEEE or any contributor to this code be liable for
-%% any damages or losses, including, but not limited to, incidental,
-%% consequential, or any other damages, resulting from the use or misuse
-%% of any information contained here.
-%%
-%% All comments are the opinions of their respective authors and are not
-%% necessarily endorsed by the IEEE.
-%%
-%% This work is distributed under the LaTeX Project Public License (LPPL)
-%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-%% distributed and modified. A copy of the LPPL, version 1.3, is included
-%% in the base LaTeX documentation of all distributions of LaTeX released
-%% 2003/12/01 or later.
-%% Retain all contribution notices and credits.
-%% ** Modified files should be clearly indicated as such, including  **
-%% ** renaming them and changing author support contact information. **
-%%*************************************************************************
 
 
-% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-% *** with production work. The IEEE's font choices and paper sizes can   ***
-% *** trigger bugs that do not appear when using other class files.       ***                          ***
-% The testflow support page is at:
-% http://www.michaelshell.org/tex/testflow/
+
 
 
 % IEEEtran V1.7 and later provides for these CLASSINPUT macros to allow the
@@ -76,12 +30,14 @@
 % To go back to Times Roman, you can use this code:
 %\renewcommand{\rmdefault}{ptm}\selectfont
 
-
-
+%Custom Commands
+\newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
 
 
 % Some very useful LaTeX packages include:
 % (uncomment the ones you want to load)
+
 
 
 
@@ -577,7 +533,7 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 
 
 % The paper headers
-\markboth{EH105 Final Paper, TODO Date}%
+\markboth{Quantum Computing Effects on Encryption}%
 {Shell \MakeLowercase{\textit{et al.}}: Bare Advanced Demo of IEEEtran.cls for IEEE Computer Society Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
@@ -692,12 +648,20 @@ In this letter, he presented a theory about the computational power required to 
 However, there is additional class of problem. Take for example cracking a password. For simplicity sake, assume the password is a PIN composed only of digits 0-9. In the worst case scenario, for a 1 digit PIN, the computer would take $10^1=10$ guesses. For a 2 digit PIN, the computer would take $10^2 = 100$ guesses. For a 4 digit pin, the computer would take $10^4=10\,000$ guesses. This is growing at a rate of $10^k$, where k is some constant. This growth pattern is known as exponential growth, where the variable is in the exponent. The resultant curve is extremely sharp. For context, if a password was able to consist of any numbers, letters, or special characters on a standard US keyboard, with only an eight character password, the number of computational steps required skyrockets up to $82^8$, or 2 with fifteen zeros following it. 
 
 \subsection{Classifying P and NP Problems}
-Mathematicians had been noticing problems like this in all different fields of math and science. So, they decided to classify these problems. If a problem could be solved in a polynomial amount of time, it was classified as difficulty P. Problems with difficulty P are both easy to solve, and easy to verify that the calculated answer is correct. 
+Mathematicians had been noticing problems with similar growth patterns in all different fields of math and science. So, they decided to classify these problems. The first type is known as a problem with difficulty P. To find the largest number in a list of numbers, a computer must iterate through each element in the list of numbers one time\footnote{For each element in the list, check if it's larger than the previous element. If it is, store that value as the largest value.}. Assume this uses $n$ computational steps. If the length of the list is doubled, the computer must go through $2n$ steps, or double the number of steps, in order to determine the largest element in the list. Tripling the length results in $3n$ computational steps. Therefore, increasing the list from $n$ elements to $k\cdot n $ elements will result in having to use $k$ times the number of computational steps. This increase results in a linear growth. By computer standards, this is considered a slow growth. Mathemeticians decided to classify these problems as type P problems, as they could be solved in  \textbf{P}olynomial time. Not only are these problems easy to solve, but they are also easy to confirm if a potential solution is correct. 
 
-Problems classified as NP are slightly different. However, ``Nondeterministic Polynomial time problems'' (also known as NP problems) are difficult to solve, but easy to check a solution to in polynomial time\footnote{``Easy'' and ``difficult'' in this case mean that they are respectively solvable and not solvable by a computer in a reasonable amount of time.}. One of the most common examples of an NP problem is finding a subset of a list that satisfies a given requirement. This is often referred to as the hackey-sack problem. If someone is presented with a collection of small sacks with specified random weights, and then asked to find a subset of those sacks that result in a given weight, the only way to approach this problem with current computational methods is a brute force algorithm, guessing a random subset, and checking the result. Yet another example of an NP problem is the factoring of a number into its prime factors. In his 1801 book \textit{Disquisitiones Arithmeticae}, mathematician Frederick Gauss proved that any number has exactly 1 prime factorization. It is extremely easy to check if a given factorization for a number is correct (the multiplication of said numbers is a P-difficulty problem). However, in order to find the unique factorization for a number, the only method currently known is guessing and checking every single factor for that number. As the length of the target number grows, so does the length of computation time, but the computation time grows exponentially. As the growth of computation time is not of a polynomial form, the factorization problem is considered an NP-difficulty problem. But what application does this have in the real world?
+Problems classified as NP are slightly different. However, ``Nondeterministic Polynomial time problems'' (also known as NP problems) are difficult to solve, but easy to check a solution to in polynomial time\footnote{``Easy'' and ``difficult'' in this case mean that they are respectively solvable and not solvable by a computer in a reasonable amount of time.}. One of the most common examples of an NP problem is finding a subset of a list that satisfies a given requirement. This is often referred to as the hackey-sack problem. If someone is presented with a collection of small sacks with specified random weights, and then asked to find a subset of those sacks that result in a given weight, the only way to approach this problem with current computational methods is a brute force algorithm, guessing a random subset, and checking the result. Unlike the P-type problem of finding the largest number in a list, the number of computational steps required for this problem results in a much faster growth. Assume that initially, just 2 sacks are given. Call these $c_1$ and $c_2$. To figure out which combination yields the correct answer, one must try the following combinations:
+\begin{itemize}
+	\item $c_1$
+	\item $c_2$
+	\item $c_1+c_2$
+\end{itemize}
+This is only 3 iterations, which isn't terrible. Mathematically, the number of iterations required can be represented with the following expression, where $r$ is the number of sacks in the initial collection. $$\sum_{k=1}^{r} \Comb{r}{k} $$ 
+
+However, this problem grows at a very fast rate. For 4 sacks in the initial collection, the number of iterations required jumps to $\sum_{k=1}^{4} \Comb{4}{k} = 15$. Doubling the length of the input quintupled the number of computational steps. Through the use of Pascal's Triangle (TODO appendix this maybe?), one can find that the required number of computational steps for an initial collection of $k$ sacks is $2^k-1$. For an idea of the rate of growth, a collection of 30 sacks would require over 1 billion computational steps. Yet another example of an NP problem is the factoring of a number into its prime factors. In his 1801 book \textit{Disquisitiones Arithmeticae}, mathematician Frederick Gauss proved that any number has exactly 1 prime factorization. It is extremely easy to check if a given factorization for a number is correct (the multiplication of said numbers is a P-difficulty problem). However, in order to find the unique factorization for a number, the only method currently known is guessing and checking every single factor for that number. As the length of the target number grows, so does the length of computation time, but the computation time grows exponentially. As the growth of computation time is not of a polynomial form, the factorization problem is considered an NP-difficulty problem. But what application does this have in the real world?
 
 \subsection{RSA Encryption}
-As a shopper enters their credit card details for an online store website, the shopper is assured that their credit card details are protected if they see the little green lock icon in their browser. Less known is the fact that the only reason this lock icon has any significant value is due to prime factorization being an NP problem, and  the difficulty of breaking RSA encryption. In 1978, three computer scientists, Ron Rivest, Adi Shamir and Leonard Adleman, publicly released an encryption algorithm titled after their names, RSA. The basis of this encryption technique\footnote{Please note that this is a highly simplified explanation of the encryption algorithm. To describe this in full detail would take far more in-depth explanations and mathematics than would be appropriate for this paper.} is two secret prime numbers (known as private keys) multiplied together to form a public key. Determining whether the two numbers multiplied together result in the public key is only possible through repetitive calculation \footnote{Although some algorithms exist to reduce the work slightly using methods to eliminate groups of guesses, it is still a polynomial reduction on an exponential growth, which means the reduction is almost unnoticeable.}. For an idea of size, the public key length for most banking systems nowadays is over six hundred digits long\footnote{A 617 digit long public key is the key length for 2048 bit encryption.}. To complete these calculations with current  methods and computing technologies  would require somewhere on the order of 6.4 quadrillion years. 
+As a shopper enters their credit card details for an online store website, the shopper is assured that their credit card details are protected if they see the little green lock icon in their browser. Less known is the fact that the only reason this lock icon has any significant value is due to prime factorization being an NP problem, and  the difficulty of breaking RSA encryption. In 1978, three computer scientists, Ron Rivest, Adi Shamir and Leonard Adleman, publicly released an encryption algorithm titled after their names, RSA. The basis of this encryption technique\footnote{Please note that this is a highly simplified explanation of the encryption algorithm. To describe this in full detail would take far more in-depth explanations and mathematics than would be appropriate for this paper.} is two secret prime numbers (known as private keys) multiplied together to form a public key.  Determining whether the two numbers multiplied together result in the public key is only possible through repetitive calculation \footnote{Although some algorithms exist to reduce the work slightly using methods to eliminate groups of guesses, it is still a polynomial reduction on an exponential growth, which means the reduction is almost unnoticeable.}. For an idea of size, the public key length for most banking systems nowadays is over six hundred digits long\footnote{A 617 digit long public key is the key length for 2048 bit encryption.}. To complete these calculations with current  methods and computing technologies  would require somewhere on the order of 6.4 quadrillion years. 
 
 \subsection{Evolution of Computational Methods}
  The phrase ``with current methods'' is used throughout this paper, in the context of methods used to solve a problem. This aligns with a computing device known as a Turing computer to solve a problem.  In 1936, English computer scientist and cryptologist Alan Turing proposed the idea of a theoretical computing machine that operates off of a memory tape with infinite length divided into discrete cells. Each cell contains a basic instruction. The reading head above the tape identifies the value of the cell on the memory tape, then moves the tape either to the left, to the right, or terminates the program. Although this may seem very simple, determining if an algorithm can be run on a Turing machine constitutes one of the most important problems in the field of computer science. A Turing computer is the most basic computer possible, taking in bits one at a time, and outputting a result based on the bit.  These computers are powerful. However, they are insufficient for solving NP problems. Because the difficulty for NP problems grows with non-polynomial growth, the computation time grows rapidly to an unmanageable amount. However, this challenge will change with the introduction of quantum computers. 
@@ -841,7 +805,7 @@ One highly important section of the field of quantum computing is its applicatio
 
 Yet another application that quantum computing will change dramatically is sociopoliticial and socioeconomic fields. In sociopolitical fields, elections are won partially through the use of algorithms to determine which groups of people stand the most chance of being swayed to vote for that particular party. Current algorithms, although they are relatively accurate, can only go so far in how accurate they can be. But with the use of quantum computing, algorithms can be made that will be able to precisely target groups. TODO this has crappy phrasing. 
 
-What about applications that could potentially save lives? Current meteorological prediction techniques 
+What about applications that could potentially save lives? Current meteorological prediction techniques
  TODO add more. 
 \subsection{Disadvantages}
 
