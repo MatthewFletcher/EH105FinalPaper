@@ -1,37 +1,11 @@
 
-
-
-
-
-% IEEEtran V1.7 and later provides for these CLASSINPUT macros to allow the
-% user to reprogram some IEEEtran.cls defaults if needed. These settings
-% override the internal defaults of IEEEtran.cls regardless of which class
-% options are used. Do not use these unless you have good reason to do so as
-% they can result in nonIEEE compliant documents. User beware. ;)
-%
-%\newcommand{\CLASSINPUTbaselinestretch}{1.0} % baselinestretch
-%\newcommand{\CLASSINPUTinnersidemargin}{1in} % inner side margin
-%\newcommand{\CLASSINPUToutersidemargin}{1in} % outer side margin
-%\newcommand{\CLASSINPUTtoptextmargin}{1in}   % top text margin
-%\newcommand{\CLASSINPUTbottomtextmargin}{1in}% bottom text margin
-
-
-
-
 %
 \documentclass[10pt,journal,compsoc]{IEEEtran}
-% If IEEEtran.cls has not been installed into the LaTeX system files,
-% manually specify the path to it like:
-% \documentclass[10pt,journal,compsoc]{../sty/IEEEtran}
-	
 
-% For Computer Society journals, IEEEtran defaults to the use of 
-% Palatino/Palladio as is done in IEEE Computer Society journals.
-% To go back to Times Roman, you can use this code:
-%\renewcommand{\rmdefault}{ptm}\selectfont
 
-%CUSTOM COMMANDS
-
+%%%%%%%%%%%%%%%%%
+%CUSTOM COMMANDS%
+%%%%%%%%%%%%%%%%%
 %Combinatorial notation
 %From https://tex.stackexchange.com/questions/107125/is-there-a-command-to-write-the-form-of-a-combination-or-permutation
 \newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
@@ -676,6 +650,8 @@ Computers have evolved drastically over the decades. In first generation compute
 %TODO add citation http://homepage.cs.uri.edu/faculty/wolfe/book/Readings/Reading03.htm
 These vacuum tubes, due to the excess heat they created, were extremely unreliable and were prone to failure every few hours. Computers soon transitioned to using transistors, micro-switches that can read either 1 (for on) or 0  (for off). They will exist in exactly one of these states at any given time. By combining these transistors into logical gates, basic functions can be performed, such as addition and multiplication. Compared to the vacuum tubes, transistors could be packed far more densely into the same area. Due to Moore's law \footnote{Moore's law is based off of Intel co-founder Gordon Moore's observation that the density of transistors on microprocessors had approximately doubled every year since the early age of computers. Moore's law states that this trend will continue every year into the future.}, the processing power of computers grows at an exponential rate. Eventually, transistors were changed to a special type of transistor known as a MOSFET\footnote{Metal Oxide Semiconductor Field Effect Transistors}. Due to their low power usage, MOSFET's could be packed into extreme densities. Eventually, these transistors were integrated into the layers of silicon in the processing chip, which allowed the size of an individual transistor to be in the tens of nanometers\footnote{For example, the Intel i7 Quad Core CPU packs 731 million transistors into a board only 0.63'' by 0.63''.}
 %Source for i7 density: http://www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html
+However, regular computers are soon reaching the limit of how small these transistors can get. It is predicted that transistors will reach their physical limit size sometime in the mid 2020's. TODO CITE
+%https://arstechnica.com/gadgets/2016/07/itrs-roadmap-2021-moores-law/
 
 %Quantum computers were first suggested in 1981 by quantum physicist Richard Feynman, at a conference at the Massachusetts Institute of Technology about computational physics. 
 A quantum computer operates uses a slightly different principle. Instead of operating on a physical piece of hardware (the transistor) that produces a bit, it operates by observation of a photon that represents a qubit\footnote{Qubit is a juxtaposition of QUantum BIT}. A qubit is a special type of bit that can either represent a 1, a 0, or a superposition of a 1 and a 0. But how can something exist in both a 1 and a 0 at the same time? To understand this, one must first understand the principle behind Schr\"{o}dinger’s cat. 
@@ -693,8 +669,8 @@ Just like the cat, as long as the qubit is unobserved, it exists in a quantum su
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+\subsection{How a Quantum Computer can solve NP-type problems}
+
 
 
 % An example of a floating figure using the graphicx package.
@@ -864,6 +840,15 @@ To figure out the total possible number of sacks, use a case by case scenario. E
 	Adding each of these together results in $1+4+6+4 = 15$. 
 	
 	The number of possible combinations for each case is not a random number. These numbers actually come from the Binomial Coefficients of Pascal's Triangle. 
+	\begin{tabular}{rccccccccc}
+		$n=0$:&    &    &    &    &  1\\\noalign{\smallskip\smallskip}
+		$n=1$:&    &    &    &  1 &    &  1\\\noalign{\smallskip\smallskip}
+		$n=2$:&    &    &  1 &    &  2 &    &  1\\\noalign{\smallskip\smallskip}
+		$n=3$:&    &  1 &    &  3 &    &  3 &    &  1\\\noalign{\smallskip\smallskip}
+		$n=4$:&  1 &    &  4 &    &  6 &    &  4 &    &  1\\\noalign{\smallskip\smallskip}
+	\end{tabular}
+	
+	The row $n=4$ has the same values as each of the cases discussed above. (The only number that does not show is the first 1, as this represents the number of ways to pick zero elements from the list of initial sacks. As this is not a valid solution to the problem, it is ignored.)
 \end{itemize}
 
 \section{Traveling Salesman NP Proof}
