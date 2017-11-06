@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.17)  4 NOV 2017 13:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.17)  5 NOV 2017 23:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -263,28 +263,30 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] [2]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
+
+ []
+
+[2]
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
+ [3]
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 824.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Font Info:    Try loading font information for OML+ppl on input line 818.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlppl.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlppl.fd
 File: omlppl.fd 
 )
 LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <9.53561> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 818.
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 824.
+
+Underfull \hbox (badness 10000) in paragraph at lines 842--843
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--839
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
 
  []
 
@@ -292,11 +294,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 838--839
 Here is how much of TeX's memory you used:
  3188 strings out of 494953
  48708 string characters out of 6180976
- 114043 words of memory out of 5000000
+ 115043 words of memory out of 5000000
  6473 multiletter control sequences out of 15000+600000
  48674 words of font info for 106 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
- 29i,7n,32p,2018b,1085s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,7n,32p,2018b,1086s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/
 dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
@@ -313,7 +315,7 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on FinalPaperIEEE_commented.pdf (4 pages, 169463 bytes).
+Output written on FinalPaperIEEE_commented.pdf (4 pages, 170256 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
