@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.17)  25 NOV 2017 08:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.17)  25 NOV 2017 09:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -372,88 +372,88 @@ Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
  [3 <./eniacsvacuum.jpg> <./adder.png>] [4]
-LaTeX Font Info:    Try loading font information for OML+ppl on input line 901.
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 906.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlppl.fd
 File: omlppl.fd 
 )
 LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <9.53561> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 901.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 906.
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--920
+Underfull \hbox (badness 10000) in paragraph at lines 924--925
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--922
+Underfull \hbox (badness 10000) in paragraph at lines 926--927
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 988--989
+Underfull \hbox (badness 10000) in paragraph at lines 993--994
 \OT1/ppl/m/n/8.03 at: www.nsa.gov/news-features/declassified-documents/nash-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 998--999
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
 []\OT1/ppl/m/n/8.03 "History of Com-put-ers", Home-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 998--999
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
 \OT1/ppl/m/n/8.03 page.cs.uri.edu, 2017. [On-line]. Avail-able: home-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 998--999
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
 \OT1/ppl/m/n/8.03 page.cs.uri.edu/faculty/wolfe/book/Readings/Reading03.htm.
  []
 
 
-Underfull \hbox (badness 7468) in paragraph at lines 1004--1005
+Underfull \hbox (badness 7468) in paragraph at lines 1009--1010
 \OT1/ppl/m/n/8.03 law-the-rule-that-really-matters-in-tech/. [Ac-cessed: 25- No
 v-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
 []\OT1/ppl/m/n/8.03 "Quantum com-put-ing ap-pli-ca-tions - IBM Q -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
 \OT1/ppl/m/n/8.03 US", Re-search.ibm.com, 2017. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
 \OT1/ppl/m/n/8.03 www.research.ibm.com/ibm-q/learn/quantum-computing-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
 []\OT1/ppl/m/n/8.03 "Computer His-tory 101: The De-vel-op-ment Of The
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
 \OT1/ppl/m/n/8.03 PC", www.tomshardware.com, 2011. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
 \OT1/ppl/m/n/8.03 www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html,
  []
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 1016--1017
+Underfull \hbox (badness 2326) in paragraph at lines 1021--1022
 []\OT1/ppl/m/n/8.03 W. San-gosanya, "Ba-sic Logic Gates", Ee.surrey.ac.uk, 2017
 .
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 1016--1017
+Underfull \hbox (badness 2452) in paragraph at lines 1021--1022
 \OT1/ppl/m/n/8.03 [On-line]. Avail-able: www.ee.surrey.ac.uk/Projects/CAL/digit
 al-
  []
@@ -461,23 +461,58 @@ al-
 Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ¶ in font pplr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1019--1020
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1025
 \OT1/ppl/m/n/8.03 News.nationalgeographic.com, 2017. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1019--1020
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1025
 \OT1/ppl/m/n/8.03 news.nationalgeographic.com/news/2013/08/130812-physics-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1029
+[]\OT1/ppl/m/n/8.03 G. Sim-mons, "Rivest-Shamir-Adleman en-cryp-tion",
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1029
+\OT1/ppl/m/n/8.03 En-cy-clo-pe-dia Bri-tan-nica, 2017. [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1029
+\OT1/ppl/m/n/8.03 www.britannica.com/topic/RSA-encryption. [Ac-cessed: 25-
+ []
+
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no ™ in font pplr7t!
+
+Underfull \hbox (badness 2318) in paragraph at lines 1031--1032
+[]\OT1/ppl/m/n/8.03 S. An-thony, "Tran-sis-tors will stop shrink-ing in 2021, b
+ut
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 1031--1032
+\OT1/ppl/m/n/8.03 Moores law will live on", AR-STech-nica, 2017. [On-line].
+ []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 1031--1032
+\OT1/ppl/m/n/8.03 Avail-able: arstechnica.com/gadgets/2016/07/itrs-roadmap-2021
+-
  []
 
 [6
 
 ] (./FinalPaperIEEE_commented.aux) ) 
 Here is how much of TeX's memory you used:
- 4441 strings out of 494953
- 67320 string characters out of 6180976
- 139049 words of memory out of 5000000
- 7662 multiletter control sequences out of 15000+600000
+ 4443 strings out of 494953
+ 67334 string characters out of 6180976
+ 139057 words of memory out of 5000000
+ 7664 multiletter control sequences out of 15000+600000
  49941 words of font info for 107 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
  38i,7n,32p,2066b,1086s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -500,7 +535,7 @@ texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on FinalPaperIEEE_commented.pdf (6 pages, 1086493 bytes).
+Output written on FinalPaperIEEE_commented.pdf (6 pages, 1086720 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream

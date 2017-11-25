@@ -662,7 +662,7 @@ However, the number of computational steps in this problem grows at an extremely
 Yet another example of an NP problem is the factoring of a number into its prime factors. In his 1801 book \textit{Disquisitiones Arithmeticae}, TODO cite mathematician Frederick Gauss proved that any number has exactly 1 prime factorization. It is extremely easy to check if a given factorization for a number is correct (the multiplication of said numbers is a P-difficulty problem). However, in order to find the unique factorization for a number, the only method currently known is guessing and checking every single factor for that number. As the length of the target number grows, so does the length of computation time, but the computation time grows exponentially. As the growth of computation time is not of a polynomial form, the factorization problem is considered an NP-difficulty problem. But what application does this have in the real world?
 
 \subsection{RSA Encryption}
-As a shopper enters their credit card details for an online store website, the shopper is assured that their credit card details and other personal data are protected if the green lock icon is present in their browser. The only reason this lock icon has any significant value is thanks to two major factors: 1, Prime factorization is classified as an NP problem, and 2, the difficulty of cracking this encryption (known as RSA encryption) is extremely difficult and time consuming using current computation methods. In 1978, three computer scientists, Ron Rivest, Adi Shamir and Leonard Adleman, publicly released an encryption algorithm titled after their names, RSA. The basis of this encryption technique\footnote{Please note that this is a highly simplified explanation of the encryption algorithm. To describe this in full detail would take far more in-depth explanations and mathematics than would be appropriate for this paper.} is two secret prime numbers (known as private keys) multiplied together to form a public key. To decrypt the message, the two original numbers must be known. Finding these original two numbers is only possible through repetitive brute force calculations\footnote{Although  some algorithms (such as Shour's Algorithm) exist to reduce the work slightly using methods to eliminate groups of guesses, it is still a polynomial reduction on an exponential growth, which means the reduction is almost unnoticeable.}. For an idea of the size of these numbers, the public key length for most banking systems nowadays is over six hundred digits long\footnote{A 617 digit long public key is the key length for 2048 bit encryption.}\cite{Numberphile}. To complete these calculations with current  methods and computing technologies  would require somewhere on the order of 6.4 quadrillion years to try all possible combinations. 
+As a shopper enters their credit card details for an online store website, the shopper is assured that their credit card details and other personal data are protected if the green lock icon is present in their browser. The only reason this lock icon has any significant value is thanks to two major factors: 1, Prime factorization is classified as an NP problem, and 2, the difficulty of cracking this encryption (known as RSA encryption) is extremely difficult and time consuming using current computation methods. In 1978, three computer scientists, Ron Rivest, Adi Shamir and Leonard Adleman, publicly released an encryption algorithm titled after their names, RSA \cite{RSA}. The basis of this encryption technique\footnote{Please note that this is a highly simplified explanation of the encryption algorithm. To describe this in full detail would take far more in-depth explanations and mathematics than would be appropriate for this paper.} is two secret prime numbers (known as private keys) multiplied together to form a public key. To decrypt the message, the two original numbers must be known. Finding these original two numbers is only possible through repetitive brute force calculations\footnote{Although  some algorithms (such as Shour's Algorithm) exist to reduce the work slightly using methods to eliminate groups of guesses, it is still a polynomial reduction on an exponential growth, which means the reduction is almost unnoticeable.}. For an idea of the size of these numbers, the public key length for most banking systems nowadays is over six hundred digits long\footnote{A 617 digit long public key is the key length for 2048 bit encryption.}\cite{Numberphile}. To complete these calculations with current  methods and computing technologies  would require somewhere on the order of 6.4 quadrillion years to try all possible combinations. 
 
 \subsection{Evolution of Computational Methods}
  The phrase ``with current methods'' is used throughout this paper, in the context of methods used to solve a problem. This aligns with a computing device known as a Turing computer to solve a problem.  In 1936, English computer scientist and cryptologist Alan Turing proposed the idea of a theoretical computing machine that operates off of a memory tape with infinite length divided into discrete cells\cite{Turing}. Each cell contains a basic instruction. The reading head above the tape identifies the value of the cell on the memory tape, then moves the tape either to the left, to the right, or terminates the program. Although this may seem very simple, determining if an algorithm can be run on a Turing machine constitutes one of the most important problems in the field of computer science. A Turing computer is the most basic computer possible, taking in bits one at a time, and outputting a result based on the bit.  These computers are powerful. However, they are insufficient for solving NP problems. Because the difficulty and number of computational steps for NP-type problems grows with non-polynomial growth, the computation time grows rapidly to an unmanageable amount. However, this challenge will change with the introduction of quantum computers. 
@@ -681,7 +681,7 @@ These vacuum tubes, due to the excess heat they created, were extremely unreliab
 
 However, regular computers will soon reach the limit of how small these transistors can get. Current CPU architecture is based off of 14 nanometer transistors. The next generation of transistors will reach 10 nanometers. 
 %https://www.intel.com/content/dam/www/public/us/en/documents/technology-briefs/bohr-14nm-idf-2014-brief.pdf
- Computer scientists predict that transistors will reach their physical limit size sometime in the mid 2020's. This limit is due to the fact that the transistors are approaching the size of atoms. TODO CITE
+ Computer scientists predict that transistors will reach their physical limit size sometime in the mid 2020's. This limit is due to the fact that the transistors are approaching the size of atoms\cite{ARSTech}. TODO CITE
 %https://arstechnica.com/gadgets/2016/07/itrs-roadmap-2021-moores-law/
 
 
@@ -856,7 +856,7 @@ Another use of quantum computing arises in the use of autonmous vehicles and rou
 %http://mathworld.wolfram.com/TravelingSalesmanProblem.html
 In math terms, this problem is attempting to find the most efficient Hamiltonian Cycle to take through a set of N nodes. In more simplified terms, this is finding the shortest route between a set of random points. This has a real life application, however; finding the shortest route between a set of points is nothing more than a navigation application such as Google Maps. The use of quantum computing in similar navigation apps would allow for more accurate calculations in arrival time, as well as more accurate methods of finding the fastest route possible. 
  
-One highly important section of the field of quantum computing is its application in the field of artificial intelligence. According to IBM, "Making facets of artificial intelligence such as machine learning much more powerful when data sets are very large, such as in searching images or video." Machine learning such as IBM's Watson relies on searching a vast database of information to calculate results. Through the use of quantum computing, these database searches can be completed on orders of magnitude faster than would be possible with standard computing methods\cite{IBM}. TODO add citation
+One highly important section of the field of quantum computing is its application in the field of artificial intelligence. According to IBM, "Making facets of artificial intelligence such as machine learning much more powerful when data sets are very large, such as in searching images or video." Machine learning such as IBM's Watson relies on searching a vast database of information to calculate results. Through the use of quantum computing, these database searches can be completed on orders of magnitude faster than would be possible with standard computing methods\cite{IBM}.
  %http://www.research.ibm.com/ibm-q/learn/quantum-computing-applications/
 
 Yet another application that quantum computing will change dramatically is sociopoliticial and socioeconomic fields. In sociopolitical fields, especially when it comes to political elections, races are won largely through the use of algorithms to determine which groups of people stand the most chance of being swayed to vote for that particular party. Current algorithms, although they are relatively accurate, can only go so far in how accurate they can be. But with the use of quantum computing, algorithms can be made that will be able to precisely target groups. 
@@ -870,11 +870,16 @@ What about encryption? RSA encryption relies on the fact that computers are unab
 
 Yet another aspect of technology that would be affected with quantum computing is the use of blockchain for cryptocurrencies. 
 
+%Explanatnio for bitcoin
+%https://www.youtube.com/watch?v=t5JGQXCTe3c
+
+
+
 TODO keep expanding this. 
 
 
 \section{Conclusion}
-\IEEEPARstart{O}{n}ce a reliable quantum computer is available, the face of mathematics will be changed forever. Math and science problems that would not have been possible before will now be able to be accomplished in mere seconds. 
+\IEEEPARstart{O}nce a reliable quantum computer is available, the face of mathematics will be changed forever. Math and science problems that would not have been possible before will now be able to be accomplished in mere seconds. 
 
 
 % if have a single appendix:
@@ -1018,6 +1023,12 @@ The authors would like to thank Dunkin Donuts, Reddit ELI5, Wikipedia, and whoev
 	\bibitem{NatGeo}
 	M. Kramer, "The Physics Behind Schrödinger's Cat Paradox", News.nationalgeographic.com, 2017. [Online]. Available: news.nationalgeographic.com/news/2013/08/130812-physics-schrodinger-erwin-google-doodle-cat-paradox-science/. [Accessed: 25- Nov- 2017].
 	
+	
+	\bibitem{RSA}
+	G. Simmons, "Rivest-Shamir-Adleman encryption", Encyclopedia Britannica, 2017. [Online]. Available: www.britannica.com/topic/RSA-encryption. [Accessed: 25- Nov- 2017].
+	
+	\bibitem{ARSTech}
+	S. Anthony, "Transistors will stop shrinking in 2021, but Moore’s law will live on", ARSTechnica, 2017. [Online]. Available: arstechnica.com/gadgets/2016/07/itrs-roadmap-2021-moores-law/. [Accessed: 25- Nov- 2017].
 \end{thebibliography}
 
 
