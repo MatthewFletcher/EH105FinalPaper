@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.18)  26 NOV 2017 07:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.17)  26 NOV 2017 07:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -341,116 +341,120 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 589.
 LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 642
 .
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 642.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 645.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 646.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 649.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 652.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 660--661
+Underfull \hbox (badness 10000) in paragraph at lines 663--664
 
  []
 
-<eniacsvacuum.jpg, id=22, 1243.64626pt x 908.39375pt>
+[2] <eniacsvacuum.jpg, id=28, 1243.64626pt x 908.39375pt>
 File: eniacsvacuum.jpg Graphic file (type jpg)
- <use eniacsvacuum.jpg>
-Package pdftex.def Info: eniacsvacuum.jpg used on input line 677.
-(pdftex.def)             Requested size: 177.06071pt x 129.32271pt.
 
-[2] <adder.png, id=30, 1284.8pt x 722.7pt>
+<use eniacsvacuum.jpg>
+Package pdftex.def Info: eniacsvacuum.jpg used on input line 683.
+(pdftex.def)             Requested size: 177.06071pt x 129.32271pt.
+ <adder.png, id=29, 1284.8pt x 722.7pt>
 File: adder.png Graphic file (type png)
  <use adder.png>
-Package pdftex.def Info: adder.png used on input line 704.
+Package pdftex.def Info: adder.png used on input line 711.
 (pdftex.def)             Requested size: 177.06071pt x 99.58934pt.
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
- [3 <./eniacsvacuum.jpg> <./adder.png>] [4]
-LaTeX Font Info:    Try loading font information for OML+ppl on input line 911.
 
+[3 <./eniacsvacuum.jpg> <./adder.png>]
+Underfull \hbox (badness 1406) in paragraph at lines 872--873
+\OT1/ppl/m/n/9.53561 Yet an-other ap-pli-ca-tion that quan-tum com-put-ing will
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlppl.fd
+ []
+
+[4]
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 920.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlppl.fd
 File: omlppl.fd 
 )
 LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <9.53561> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 911.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 920.
 
-Underfull \hbox (badness 10000) in paragraph at lines 929--930
+Underfull \hbox (badness 10000) in paragraph at lines 938--939
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
+Underfull \hbox (badness 10000) in paragraph at lines 940--941
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 998--999
+Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
 \OT1/ppl/m/n/8.03 at: www.nsa.gov/news-features/declassified-documents/nash-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1018
 []\OT1/ppl/m/n/8.03 "History of Com-put-ers", Home-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1018
 \OT1/ppl/m/n/8.03 page.cs.uri.edu, 2017. [On-line]. Avail-able: home-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1018
 \OT1/ppl/m/n/8.03 page.cs.uri.edu/faculty/wolfe/book/Readings/Reading03.htm.
  []
 
 
-Underfull \hbox (badness 7468) in paragraph at lines 1014--1015
+Underfull \hbox (badness 7468) in paragraph at lines 1023--1024
 \OT1/ppl/m/n/8.03 law-the-rule-that-really-matters-in-tech/. [Ac-cessed: 25- No
 v-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1018
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1027
 []\OT1/ppl/m/n/8.03 "Quantum com-put-ing ap-pli-ca-tions - IBM Q -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1018
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1027
 \OT1/ppl/m/n/8.03 US", Re-search.ibm.com, 2017. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1018
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1027
 \OT1/ppl/m/n/8.03 www.research.ibm.com/ibm-q/learn/quantum-computing-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1021
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
 []\OT1/ppl/m/n/8.03 "Computer His-tory 101: The De-vel-op-ment Of The
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1021
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
 \OT1/ppl/m/n/8.03 PC", www.tomshardware.com, 2011. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1021
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
 \OT1/ppl/m/n/8.03 www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html,
  []
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 1026--1027
+Underfull \hbox (badness 2326) in paragraph at lines 1035--1036
 []\OT1/ppl/m/n/8.03 W. San-gosanya, "Ba-sic Logic Gates", Ee.surrey.ac.uk, 2017
 .
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 1026--1027
+Underfull \hbox (badness 2452) in paragraph at lines 1035--1036
 \OT1/ppl/m/n/8.03 [On-line]. Avail-able: www.ee.surrey.ac.uk/Projects/CAL/digit
 al-
  []
@@ -458,27 +462,27 @@ al-
 Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ¶ in font pplr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
 \OT1/ppl/m/n/8.03 News.nationalgeographic.com, 2017. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
 \OT1/ppl/m/n/8.03 news.nationalgeographic.com/news/2013/08/130812-physics-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1043
 []\OT1/ppl/m/n/8.03 G. Sim-mons, "Rivest-Shamir-Adleman en-cryp-tion",
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1043
 \OT1/ppl/m/n/8.03 En-cy-clo-pe-dia Bri-tan-nica, 2017. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1043
 \OT1/ppl/m/n/8.03 www.britannica.com/topic/RSA-encryption. [Ac-cessed: 25-
  []
 
@@ -486,31 +490,31 @@ Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
 
-Underfull \hbox (badness 2318) in paragraph at lines 1036--1037
+Underfull \hbox (badness 2318) in paragraph at lines 1045--1046
 []\OT1/ppl/m/n/8.03 S. An-thony, "Tran-sis-tors will stop shrink-ing in 2021, b
 ut
  []
 
 
-Underfull \hbox (badness 6625) in paragraph at lines 1036--1037
+Underfull \hbox (badness 6625) in paragraph at lines 1045--1046
 \OT1/ppl/m/n/8.03 Moores law will live on", AR-STech-nica, 2017. [On-line].
  []
 
 
-Underfull \hbox (badness 3735) in paragraph at lines 1036--1037
+Underfull \hbox (badness 3735) in paragraph at lines 1045--1046
 \OT1/ppl/m/n/8.03 Avail-able: arstechnica.com/gadgets/2016/07/itrs-roadmap-2021
 -
  []
 
 [6] (./FinalPaperIEEE_commented.aux) ) 
 Here is how much of TeX's memory you used:
- 4443 strings out of 494953
- 67334 string characters out of 6180976
+ 4439 strings out of 494953
+ 67280 string characters out of 6180976
  139057 words of memory out of 5000000
- 7664 multiletter control sequences out of 15000+600000
- 49941 words of font info for 107 fonts, out of 8000000 for 9000
+ 7662 multiletter control sequences out of 15000+600000
+ 48055 words of font info for 105 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
- 38i,7n,32p,2077b,1086s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,32p,1914b,1086s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/
 dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
@@ -526,15 +530,14 @@ sfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palati
-no/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb
->
-Output written on FinalPaperIEEE_commented.pdf (6 pages, 1087315 bytes).
+e/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfdi
+ng/uzdr.pfb>
+Output written on FinalPaperIEEE_commented.pdf (6 pages, 1083684 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
