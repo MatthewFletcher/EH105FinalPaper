@@ -459,7 +459,7 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Effects of the Development of Quantum Computing on NP-Complete Problems and the RSA Encryption Algorithm}
+\title{Effects of the Development of Quantum Computing on NP Difficulty Problems}
 %
 %
 % author names and IEEE memberships
@@ -549,7 +549,7 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 % in the abstract or keywords.
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-With general purpose quantum computers on the verge of being invented in the next decade, some worry about what the effects these will have on society. Since the 1980's, the RSA Encryption algorithm has been used as a near foolproof method of encrypting sensitive data sent over the Internet. Its security relies on the relatively slow computing power of modern day computers as well as prime factorization being an NP-complete math problem.  Furthermore, many math problems present themselves an unsolvable due to their difficulty to being solved with current computational methods. Finally, blockchain's use in cryptocurrencies is only secure due to the irreversable hashing algorithm used, which ensures the security of the individual accounts. This paper analyzes the effects of quantum computing on P vs NP, RSA Encryption, and blockchain. 
+With general purpose quantum computers on the verge of being invented in the next decade, some worry about what the effects these will have on society. Since the 1980's, the RSA Encryption algorithm has been used as a near foolproof method of encrypting sensitive data sent over the Internet. Its security relies on the relatively slow computing power of modern day computers as well as prime factorization being an NP-complete math problem.  Furthermore, many math problems present themselves an unsolvable due to their difficulty to being solved with current computational methods. Finally, blockchain's use in cryptocurrencies is only secure due to the irreversable hashing algorithm used, which ensures the security of the individual accounts. This paper analyzes the effects of quantum computing on P vs NP, RSA Encryption, and blockchain, as well as a few other applications in the modern world. 
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -641,14 +641,15 @@ Quantum computing, Cryptography, Encryption, P vs NP, RSA, Prime Factorization T
 %https://www.nsa.gov/news-features/declassified-documents/nash-letters/assets/files/nash_letters1.pdf. 
 In this letter, he presented a theory about the computational power required to find the solutions to various mathematical problems. In particular, he focused on the art of cryptography, and the length of time necessary to crack an encryption. Up to that point, computer scientists who created algorithms concentrated solely on the required time to solve a particular length of problem. Nash suggested that instead of fixating on the length of time necessary to solve a problem of a particular length, scientists should consider the rate of difficulty growth of the problem resolution time given the length of the inputs grew at a linear rate. Furthermore, in lieu of computation time, a scientist should focus on the number of computational steps\footnote{A computational step is the number of state changes that the machine processes  in carrying out the set of steps to solve the problem.} required to solve the problem.  The shape of this growth curve would help classify the difficulty of the problem. 
 
+About 3 decades after Nash's letter, a theoretical physicist at MIT named Richard Feynman proposed the idea of a computer that would operate through the use of quantum mechanics. At the time, the idea was simply theoretical, as the technology at the time was not advanced enough to be able to create such a ``quantum computer''. However, scientists began to wonder what the effects of such a computer would have on math and science. This curiosity sparked what has now become the leading edge of innovation in computing power. 
 
-For example, the addition of numbers is a problem with a characteristic of linear growth. Doubling the number of digits to be added results in approximately double the computation time. Therefore, these problems grow at a linear rate\footnote{Linear growth is still technically considered a polynomial growth of the form $n^k$ with $k=0$.}.  However, problems such as multiplication grow at a slightly faster pace. Doubling the length of the inputs results in a growth of $2^2$ times the number of computational steps. Tripling the length of the input  results in a growth of $3^2$ times the number of computational steps. This growth may be somewhat rapid, but can be expressed as a polynomial\footnote{A polynomial is an expression that can be written in the form $a_{n}x^{n}+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_{1}x+a_{0}$ }. The exponent of the growth rate is always constant. Polynomial growth can therefore be displayed as some combination of terms in the form $n^k$, where n is a variable and $k$ is a constant.
-
-Another type of problem is anything similar to cracking a password by brute force. For simplicity sake, assume the password is a PIN composed only of digits 0-9. In the worst case scenario, for a 1 digit PIN, the computer would take $10^1=10$ guesses. For a 2 digit PIN, the computer would take $10^2 = 100$ guesses. For a 4 digit pin, the computer would take $10^4=10\,000$ guesses. This is growing at a rate of $10^k$, where $k$ is some constant. This growth pattern is known as exponential growth, where the variable is in the exponent. The resultant curve is extremely sharp. For context, if a password was able to consist of any numbers, letters, or special characters on a standard US keyboard, with only an eight character password, the number of computational steps required skyrockets up to $82^8$, or 2 with fifteen zeros following it. 
 
 \section{Classifying P and NP Problems}
-\IEEEPARstart{M}{athematicians} had been noticing problems with similar growth patterns in all different fields of math and science. So, they decided to classify these problems, resulting in one of the most famous unsolved problems in math: The P vs. NP conjecture.
+\IEEEPARstart{F}{or example}, the addition of numbers is a problem with a characteristic of linear growth. Doubling the number of digits to be added results in approximately double the computation time. Therefore, these problems grow at a linear rate\footnote{Linear growth is still technically considered a polynomial growth of the form $n^k$ with $k=0$.}.  However, problems such as multiplication grow at a slightly faster pace. Doubling the length of the inputs results in a growth of $2^2$ times the number of computational steps. Tripling the length of the input  results in a growth of $3^2$ times the number of computational steps. This growth may be somewhat rapid, but can be expressed as a polynomial\footnote{A polynomial is an expression that can be written in the form $a_{n}x^{n}+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_{1}x+a_{0}$ }. The exponent of the growth rate is always constant. Polynomial growth can therefore be displayed as some combination of terms in the form $n^k$, where n is a variable and $k$ is a constant.
 
+Another type of problem is anything similar to cracking a password by brute force. For simplicity sake, assume the password is a PIN composed only of digits 0-9. In the worst case scenario, for a 1 digit PIN, the computer would take $10^1=10$ guesses. For a 2 digit PIN, the computer would take $10^2 = 100$ guesses. For a 4 digit pin, the computer would take $10^4=10\,000$ guesses. This is growing at a rate of $10^k$, where $k$ is some constant. This growth pattern is known as exponential growth, where the variable is in the exponent. The resultant curve is extremely sharp. For context, if a password was able to consist of any numbers, letters, or special characters on a standard US keyboard, with only an eight character password, the number of computational steps required skyrockets up to $82^8$, or 2 with fifteen zeros following. 
+
+Mathematicians had been noticing problems with similar growth patterns in all different fields of math and science. So in 1971, mathematicians Stephen Cook and Leonid Levin formulated one of the most famous problems in all of mathematics: the P vs NP
 \subsection{P-Type problems} The first type is known as a problem with difficulty P. To find the largest number in a list of numbers, a computer must iterate through each element in the list of numbers one time\footnote{For each element in the list, check if it's larger than the previous element. If it is, store that value as the largest value.}. Assume this uses $n$ computational steps. If the length of the list is doubled, the computer must go through $2n$ steps, or double the number of steps, in order to determine the largest element in the list. Tripling the length results in $3n$ computational steps. Therefore, increasing the list from $n$ elements to $k\cdot n $ elements will result in having to use $k$ times the number of computational steps\footnote{A sample Python script that does this calculation is in Appendix A.}. This increase results in a linear growth. By computer standards, this is considered a slow growth. Mathematicians decided to classify these problems as type P problems, as they could be solved in  \textbf{P}olynomial time. Not only are these problems easy to solve, but they are also easy to confirm if a potential solution is correct. 
 
 \subsection{NP-type Problems}
@@ -753,7 +754,7 @@ A quantum computer, on the other hand, uses bits that exist in a state that is e
 
 %Algorithm link https://www.quantiki.org/wiki/deutsch-jozsa-algorithm
 
-This ability is what makes a quantum computer so powerful. Instead of operating serially on a stream of bits, the computer can operate in parallel, on multiple bits simultaneously. 
+This ability is what makes a quantum computer so powerful. Instead of operating serially on a stream of bits, the computer can operate in parallel, on multiple bits simultaneously. This capability, combined with the right algorithm, will be able to solve a NP problem in polynomial time. 
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -856,30 +857,42 @@ This ability is what makes a quantum computer so powerful. Instead of operating 
 \section{Effects of Quantum Computing}
 \IEEEPARstart{W}{hat} effects will the rise of a general purpose quantum computer have on real life applications?
 \subsection{Cryptography}
-The United States Military expresses a large amount of interest in quantum computing, primarily for its use in cryptanalysis, or code-breaking. Because quantum computers can analyze large numbers of bits simultaneously, they are excellent for problems that require brute force calculations. 
+The United States Military expresses a large amount of interest in quantum computing, primarily for its use in cryptanalysis, or code-breaking. Because quantum computers can analyze large numbers of bits simultaneously, they are excellent for problems that require brute force calculations. This allows for the breaking of coded messages from enemy intelligence, ultimately allowing for an advantage over the enemy to successfully complete a mission while saving lives. 
 
 \subsection{Route Generation}
-Another use of quantum computing arises in the use of autonmous vehicles and route generation. Finding the shortest route between a set of points is considered an NP-hard problem
-\footnote{See Appendix C }.
+Another use of quantum computing arises in finding the shortest route between a set of points. Imagine a door-to-door salesman, with a set of houses he has to visit. To find the most efficient route to visit all of these houses requires a brute force approach. Guessing a random route, as well as measuring the length of that route are both extremely easy problems, classified as P difficulty. However, determining the shortest route is considered an NP problem\footnote{See Appendix C }.
 %http://mathworld.wolfram.com/TravelingSalesmanProblem.html
-In math terms, this problem is attempting to find the most efficient Hamiltonian Cycle to take through a set of N nodes. In more simplified terms, this is finding the shortest route between a set of random points. This has a real life application, however; finding the shortest route between a set of points is nothing more than a navigation application such as Google Maps. The use of quantum computing in similar navigation apps would allow for more accurate calculations in arrival time, as well as more accurate methods of finding the fastest route possible. 
+In math terms, this problem is attempting to find the most efficient Hamiltonian Cycle to take through a set of N nodes. In more simplified terms, this is finding the shortest route between a set of random points. One practical application of this is route generation for logistics management companies. 
+
+Logistics companies such as the United Postal Service (UPS) deliver millions of packages every day, with the route changing daily. But finding the shortest path is not the only issue. Certain packages must be delivered before others, due to priority shipping methods. The current algorithms use a heuristic approach, approximating the best route and using "rules of thumb", resulting in sub-optimal routes. Again, the only way to find the best route currently is with brute force, which is impossible with classical computing. In fact, there are more possible routes for a single UPS truck to take daily than there are nanoseconds that the Earth has existed\cite{Fast}. With quantum computing, this calculation would be able to be solved in polynomial time, allowing UPS to find optimal routes for all of its trucks. This would allow for both time and money to be saved. Furthermore, because the trucks are traveling less on the road, they are emitting less pollution. 
+
+
  
  \subsection{Artificial Intelligence}
-One highly important section of the field of quantum computing is its application in the field of artificial intelligence. According to IBM, one application is "Making facets of artificial intelligence such as machine learning much more powerful when data sets are very large, such as in searching images or video." Machine learning such as IBM's Watson relies on searching a vast database of information to calculate results. Through the use of quantum computing, these database searches can be completed on orders of magnitude faster than would be possible with standard computing methods\cite{IBM}.
+One highly important section of the field of quantum computing is its application in the field of artificial intelligence. According to IBM, one application is "Making facets of artificial intelligence such as machine learning much more powerful when data sets are very large, such as in searching images or video." Machine learning such as IBM's Watson relies on searching a vast database of information to calculate results. Through the use of quantum computing, these database searches can be completed on orders of magnitude faster than would be possible with standard computing methods\cite{IBM}. The initial drawbacks for most usage would be the cost of the hardware, as well as developing algorithms that can properly run on quantum-based hardware. However, as with most all first-generation hardware, the initial cost is astronomically high. If quantum computers follow anything like the path of classical computers' development, the price will soon drop, allowing companies to use quantum algorithms in the use of artificial intelligence, turning a high-cost item into a cost-effective alternative. 
  %http://www.research.ibm.com/ibm-q/learn/quantum-computing-applications/
 
-\subsection{Sociopolitical Applications}
-Yet another application that quantum computing will change dramatically is sociopoliticial and socioeconomic fields. In sociopolitical fields, especially when it comes to political elections, races are won largely through the use of algorithms to determine which groups of people stand the most chance of being swayed to vote for that particular party. Current algorithms, although they are relatively accurate, can only go so far in how accurate they can be. But with the use of quantum computing, algorithms can be made that will be able to precisely target groups. 
-
-%\subsection{Disadvantages}
-%One of the largest problems with a quantum computer is that it is still not feasible. The power required to run the processor combined with the temperatures measured in milliKelvin to cool the hardware results in astronomical costs. Furthermore, the difficulty of actually setting up the hardware would be prodigiously difficult. 
+ 
 
 \subsection{RSA Encryption}
 
-As a shopper enters their credit card details for an online store website, the shopper is assured that their credit card details and other personal data are protected if the green lock icon is present in their browser. The only reason this lock icon has any significant value is thanks to two major factors: 1, Prime factorization is classified as an NP problem, and 2, the difficulty of cracking this encryption (known as RSA encryption) is extremely difficult and time consuming using current computation methods. In 1978, three computer scientists, Ron Rivest, Adi Shamir and Leonard Adleman, publicly released an encryption algorithm titled after their names, RSA \cite{RSA}. The basis of this encryption technique\footnote{Please note that this is a highly simplified explanation of the encryption algorithm. To describe this in full detail would take far more in-depth explanations and mathematics than would be appropriate for this paper.} is two secret prime numbers (known as private keys) multiplied together to form a public key. To decrypt the message, the two original numbers must be known. Finding these original two numbers is only possible through repetitive brute force calculations\footnote{Although  some algorithms (such as Shour's Algorithm) exist to reduce the work slightly using methods to eliminate groups of guesses, it is still a polynomial reduction on an exponential growth, which means the reduction is almost unnoticeable.}. For an idea of the size of these numbers, the public key length for most banking systems nowadays is over six hundred digits long\footnote{A 617 digit long public key is the key length for 2048 bit encryption.}\cite{Numberphile}. To complete these calculations with current  methods and computing technologies  would require somewhere on the order of 6.4 quadrillion years to try all possible combinations. 
+As a shopper enters their credit card details for an online store website, the shopper is assured that their credit card details and other personal data are protected if the green lock icon is present in their browser. The only reason this lock icon has any significant value is thanks to two major factors: 1, Prime factorization is classified as an NP problem, and 2, the difficulty of cracking this encryption (known as RSA encryption) is extremely difficult and time consuming using current computation methods. In 1978, three computer scientists, Ron Rivest, Adi Shamir and Leonard Adleman, publicly released an encryption algorithm titled after their names, RSA \cite{RSA}. The basis of this asymmetric encryption technique\footnote{Please note that this is a highly simplified explanation of the encryption algorithm. To describe this in full detail would take far more in-depth explanations and mathematics than would be appropriate for this paper.} is two secret prime numbers (known as private keys) multiplied together to form a public key. To decrypt the message, the two original numbers must be known. Finding these original two numbers is only possible through repetitive brute force calculations\footnote{Although  some algorithms exist to reduce the work slightly using methods to eliminate groups of guesses, it is still a polynomial reduction on an exponential growth, which means the reduction is almost unnoticeable.}. For an idea of the size of these numbers, the public key length for most banking systems nowadays is over six hundred digits long\footnote{A 617 digit long public key is the key length for 2048 bit encryption.}\cite{Numberphile}. To complete these calculations with current  methods and computing technologies  would require somewhere on the order of 6.4 quadrillion years to try all possible combinations. 
+
+However, with quantum computing's parallel computation techniques, multiple factors can be tried simultaneously, cutting the time to crack an encryption drastically. This is not just a science fiction threat, though. Previously, a variant of RSA cryptography known as elliptic curve cryptography\footnote{Elliptic curve cryptography is an encryption method similar to RSA that uses discrete logarithms of elliptic curves to choose the private keys. However, it still operates off of the same principle, with a private key and a public key.} was approved by the National Security Administration (NSA) as the minimum for encryption standards of private data. In August of 2017, the NSA released a statement about the threat from quantum computing:
+
+"For those vendors and partners that have already transitioned to Suite B [elliptic curve cryptography], we recognize that this took a great deal of effort on your part, and we thank you for your efforts. … Unfortunately, the growth of elliptic curve use has bumped up against the fact of continued progress in the research on quantum computing, which has made it clear that elliptic curve cryptography is not the long term solution many once hoped it would be. Thus, we have been obligated to update our strategy."\cite{Information}
+
+In other words, even the NSA is concerned with the rise of quantum computing. Furthermore, any data that is currently stored with non-post-quantum cryptography methods  will be subject to cracking within the next few decades at most. 
+
+Many major organizations, such as Internet Service Providers (ISP's) and the NSA store user data in an encrypted (and currently secure) manner. The sole reason this data is secure is because of the reliance in standard encryption methods. If a quantum computer is developed by a malicious source (foreign or domestic), everyone's so-called "private" information is at imminent risk of being decoded and stolen. 
 
 \subsection{Blockchain and Cryptocurrencies}
-Yet another aspect of technology that would be affected with quantum computing is the use of blockchain for cryptocurrencies. Blockchain is the use of a peer-to-peer ledger to account for and validate transactions of a cryptocurrency, such as Bitcoin, Ethereum, and Monero. These digital currencies are a decentralized banking authority where transactions are verified via hashing of both a private key for the the individual making the transaction along with some information about the time of the transaction to allow for higher security. The ledger is simply a table of wallet ID's and the balances associated with each of those wallets. Through the use of cryptographic hashes, transactions between wallets are verified when ledger maintainers check random values into the hash function.
+Yet another aspect of technology that would be affected with quantum computing is the use of blockchain for cryptocurrencies. Blockchain is a public peer-to-peer ledger to account for and validate transactions of a cryptocurrency, such as Bitcoin, Ethereum, and Monero. The ledger consists of all the user ID's (known as wallets), along with the respective balances in those wallets, and is maintained through computers on the network running powerful hardware to verify thousands of transactions per second. \cite{Bitcoin}. The security of cryptocurrencies relies on the assumption that no individual will ever control more than 50\% of the network. Once this happens, the majority control can be used maliciously. The ledger is maintained from a protocol called "Proof of Work", requiring miners to   \cite{Aggarwal}
+
+%https://arxiv.org/abs/1710.10377
+
+%Source of bitcoin
+%https://bitcoin.org/en/how-it-works
 
 %Source for BCN threat
 % https://futurism.com/bitcoins-security-quantum-computers/
@@ -893,7 +906,7 @@ TODO keep expanding this.
 
 
 \section{Conclusion}
-\IEEEPARstart{O}nce a reliable quantum computer is available, the face of mathematics will be changed forever. Math and science problems that would not have been possible before will now be able to be accomplished in mere seconds. But as with all new technology, there will always be drawbacks. 
+\IEEEPARstart{O}nce a reliable general purpose quantum computer is available, the face of mathematics will be changed forever. Math and science problems that would not have been possible before will now be able to be accomplished in mere seconds. But as with all new technology, there will always be drawbacks. 
 
 
 % if have a single appendix:
@@ -932,9 +945,9 @@ Let the number of sacks in the initial collection be $4$.
 To figure out the total possible number of sacks, use a case by case scenario. Every final count of sacks will either contain 1, 2, 3, or 4 sacks. 
 \begin{itemize}
 	\item \textbf{Case 1}, picking 4 sacks. \\
-	There are 4 possible choices for the first sack, 3 possible for the second, 2 for the third, and 1 for the fourth. Mathematically represented, there are  $\Perm{4}{4} = 4! = 4\cdot3\cdot2\cdot1$ possible combinations. However, as the order the sacks are picked in does not matter, divide by $4!$. The mathematical represenatation of this compensation is $\Comb{4}{4}$. $$\frac{4!}{4!} = 1$$. This makes sense, because there's only 1 way to pick a collection of all 4 sacks. 
+	There are 4 possible choices for the first sack, 3 possible for the second, 2 for the third, and 1 for the fourth. Mathematically represented, there are  $\Perm{4}{4} = 4! = 4\cdot3\cdot2\cdot1$ possible combinations. However, as the order the sacks are picked in does not matter (picking sacks 1,2,3, and 4 is the same as picking sacks 3,2,4, and 1), divide by $4!$. The mathematical represenatation of this compensation is $\Comb{4}{4}$. $$\frac{4!}{4!} = 1$$ This makes sense, because there's only 1 way to pick a collection of all 4 sacks. 
 	\item \textbf{Case 2}, picking 3 sacks.\\
-	With the same logic as the previous case, there are  $\Perm{4}{3} = 4\cdot3\cdot2$  possible unordered combinations. However, each choice of 3 sacks can be arranged in $3!$ ways, so therefore divide the total number of collections $(4!)$ by the number of arrangements of each $(3!)$. $$\frac{4!}{3!} = \frac{24}{6} = 4$$.
+	With the same logic as the previous case, there are  $\Perm{4}{3} = 4\cdot3\cdot2$  possible unordered combinations. However, each choice of 3 sacks can be arranged in $3!$ ways, so therefore divide the total number of collections $(4!)$ by the number of arrangements of each $(3!)$. $$\frac{4!}{3!} = \frac{24}{6} = 4$$
 	\item \textbf{Case 3}, picking 2 sacks.\\
 	\[\Comb{4}{2} = \frac{\Perm{4}{2}}{2!} = 6\]
 	\item \textbf{Case 4}, picking 1 sack.\\
@@ -968,7 +981,7 @@ Insert Appendix text here
 \fi
 
 
-The authors would like to thank Dunkin Donuts, Reddit ELI5, Wikipedia, and whoever invented copy/paste. 
+The author would like to thank Dunkin Donuts, Reddit ELI5, and Wikipedia.
 
 
 % Can use something like this to put references on a page
@@ -1043,6 +1056,18 @@ The authors would like to thank Dunkin Donuts, Reddit ELI5, Wikipedia, and whoev
 	
 	\bibitem{ARSTech}
 	S. Anthony, "Transistors will stop shrinking in 2021, but Moore’s law will live on", ARSTechnica, 2017. [Online]. Available: arstechnica.com/gadgets/2016/07/itrs-roadmap-2021-moores-law/. [Accessed: 25- Nov- 2017].
+	
+	\bibitem{Information}
+	"Information Assurance--Suite B Cryptography", Nsa.gov,2017. [Online]. Available: www.nsa.gov/ia/programs/suiteb\_cryptography/index.shtml. [Accessed: 26- Nov- 2017].
+	
+	\bibitem{Bitcoin}
+	"How does Bitcoin work? - Bitcoin", Bitcoin.org, 2017. [Online]. Available: https://bitcoin.org/en/how-it-works. [Accessed: 26- Nov- 2017].
+	
+	\bibitem{Fast}
+	D. Zax, "Brown Down: UPS Drivers Vs. The UPS Algorithm", Fast Company, 2017. [Online]. Available: www.fastcompany.com/3004319/brown-down-ups-drivers-vs-ups-algorithm. [Accessed: 26- Nov- 2017].
+	
+	\bibitem{Aggarwal}
+	D. Aggarwal, G. Brennen, T. Lee, M. Santha and M. Tomamichel, "Quantum attacks on Bitcoin, and how to protect against them", Arxiv.org, 2017. [Online]. Available: https://arxiv.org/abs/1710.10377. [Accessed: 26- Nov- 2017].
 \end{thebibliography}
 
 
