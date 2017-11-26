@@ -549,12 +549,12 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 % in the abstract or keywords.
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-With general purpose quantum computers on the verge of being invented in the next decade, some worry about what the effects these will have on society. Since the 1980's, the RSA Encryption algorithm has been used as a near foolproof method of encrypting sensitive data sent over the Internet. Its security relies on the relatively slow computing power of modern day computers as well as prime factorization being an NP-complete math problem.  Furthermore, many math problems present themselves an unsolvable due to their difficulty to being solved with current computational methods. Finally, blockchain's use in cryptocurrencies is only secure due to the irreversable hashing algorithm used, which ensures the security of the individual accounts. This paper analyzes the effects of quantum computing on P vs NP, RSA Encryption, and blockchain, as well as a few other applications in the modern world. 
+With general purpose quantum computers on the verge of being invented in the next decade, some worry about what the effects these will have on society. Many secure operations nowadays are only secure due to the extreme difficulty in solving the math problems that they are built from. Two major examples are RSA Encryption and blockchain. RSA's security lies in prime factorization, and blockchain's security lies in the difficulty of its hashing algorithm.  Since the 1980's, the RSA Encryption algorithm has been used as a near foolproof method of encrypting sensitive data sent over the Internet. Furthermore, blockchain's use in cryptocurrencies is only secure due to the irreversable hashing algorithm used, which ensures the security of the individual accounts. This paper analyzes the effects of quantum computing on the NP applications of RSA Encryption and blockchain, as well as a few other applications in the modern world. 
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-Quantum computing, Cryptography, Encryption, P vs NP, RSA, Prime Factorization TODO alphabetize
+Cryptography, Encryption, Quantum computing, P vs NP, Prime Factorization, RSA, Traveling Salesman
 \end{IEEEkeywords}}
 
 
@@ -645,11 +645,11 @@ About 3 decades after Nash's letter, a theoretical physicist at MIT named Richar
 
 
 \section{Classifying P and NP Problems}
-\IEEEPARstart{F}{or example}, the addition of numbers is a problem with a characteristic of linear growth. Doubling the number of digits to be added results in approximately double the computation time. Therefore, these problems grow at a linear rate\footnote{Linear growth is still technically considered a polynomial growth of the form $n^k$ with $k=0$.}.  However, problems such as multiplication grow at a slightly faster pace. Doubling the length of the inputs results in a growth of $2^2$ times the number of computational steps. Tripling the length of the input  results in a growth of $3^2$ times the number of computational steps. This growth may be somewhat rapid, but can be expressed as a polynomial\footnote{A polynomial is an expression that can be written in the form $a_{n}x^{n}+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_{1}x+a_{0}$ }. The exponent of the growth rate is always constant. Polynomial growth can therefore be displayed as some combination of terms in the form $n^k$, where n is a variable and $k$ is a constant.
+\IEEEPARstart{T}{he rate} of growth of a problem's difficulty as its input lengths increase can vary drastically. For example, the addition of numbers is a problem with a characteristic of linear growth. Doubling the number of digits to be added results in approximately double the computation time. Therefore, these problems grow at a linear rate\footnote{Linear growth is still technically considered a polynomial growth of the form $n^k$ with $k=0$.}.  However, problems such as multiplication grow at a slightly faster pace. Doubling the length of the inputs results in a growth of $2^2$ times the number of computational steps. Tripling the length of the input  results in a growth of $3^2$ times the number of computational steps. This growth may be somewhat rapid, but can be expressed as a polynomial\footnote{A polynomial is an expression that can be written in the form $a_{n}x^{n}+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_{1}x+a_{0}$ }. The exponent of the growth rate is always constant. Polynomial growth can therefore be displayed as some combination of terms in the form $n^k$, where n is a variable and $k$ is a constant.
 
 Another type of problem is anything similar to cracking a password by brute force. For simplicity sake, assume the password is a PIN composed only of digits 0-9. In the worst case scenario, for a 1 digit PIN, the computer would take $10^1=10$ guesses. For a 2 digit PIN, the computer would take $10^2 = 100$ guesses. For a 4 digit pin, the computer would take $10^4=10\,000$ guesses. This is growing at a rate of $10^k$, where $k$ is some constant. This growth pattern is known as exponential growth, where the variable is in the exponent. The resultant curve is extremely sharp. For context, if a password was able to consist of any numbers, letters, or special characters on a standard US keyboard, with only an eight character password, the number of computational steps required skyrockets up to $82^8$, or 2 with fifteen zeros following. 
 
-Mathematicians had been noticing problems with similar growth patterns in all different fields of math and science. So in 1971, mathematicians Stephen Cook and Leonid Levin formulated one of the most famous problems in all of mathematics: the P vs NP
+Mathematicians had been noticing problems with similar growth patterns in all different fields of math and science. So in 1971, mathematicians Stephen Cook and Leonid Levin formulated one of the most famous Millenium Prize Problems\footnote{The Millenium Prize problems are 7 unsolved math problems from throughout mathematical history. The Clay Mathematics Institute will award one million dollars to the first confirmed proof of each problem.} in all of mathematics: the P vs NP problem.
 \subsection{P-Type problems} The first type is known as a problem with difficulty P. To find the largest number in a list of numbers, a computer must iterate through each element in the list of numbers one time\footnote{For each element in the list, check if it's larger than the previous element. If it is, store that value as the largest value.}. Assume this uses $n$ computational steps. If the length of the list is doubled, the computer must go through $2n$ steps, or double the number of steps, in order to determine the largest element in the list. Tripling the length results in $3n$ computational steps. Therefore, increasing the list from $n$ elements to $k\cdot n $ elements will result in having to use $k$ times the number of computational steps\footnote{A sample Python script that does this calculation is in Appendix A.}. This increase results in a linear growth. By computer standards, this is considered a slow growth. Mathematicians decided to classify these problems as type P problems, as they could be solved in  \textbf{P}olynomial time. Not only are these problems easy to solve, but they are also easy to confirm if a potential solution is correct. 
 
 \subsection{NP-type Problems}
@@ -674,7 +674,8 @@ Computers have evolved drastically over the decades. In first generation compute
 
 
 
-%TODO add citation http://homepage.cs.uri.edu/faculty/wolfe/book/Readings/Reading03.htm
+%Source 
+%http://homepage.cs.uri.edu/faculty/wolfe/book/Readings/Reading03.htm
 %ELI5 https://www.reddit.com/r/explainlikeimfive/comments/2ax3k3/eli5_how_does_a_computer_actually_work_like_how/
 These vacuum tubes, due to the excess heat they created, were extremely unreliable and were prone to failure every few hours. See Fig. 1 for an example of a vacuum tube computer. Computers soon transitioned to using microswitches known as transistors.  Compared to the vacuum tubes, transistors could be packed far more densely into the same area. Due to Moore's law\footnote{Moore's law is based off of Intel co-founder Gordon Moore's observation that the density of transistors on microprocessors had approximately doubled every year since the early age of computers. Moore's law states that this trend will continue every year into the future.}, the processing power of computers grows at an exponential rate\cite{Moore}. Eventually, transistors were changed to a special type of transistor known as a MOSFET\footnote{Metal Oxide Semiconductor Field Effect Transistors}. These operate on the same underlying principle as a regular transistor, with a binary existance of a 1 or a 0 for on and off. Due to their low power usage, MOSFET's could be packed into extreme densities. Eventually, these transistors were integrated into the layers of silicon in the processing chip, which allowed the size of an individual transistor to be in the tens of nanometers\cite{Tom's}\footnote{For example, the Intel i7 Quad Core CPU packs 731 million transistors into a board only 0.63'' by 0.63''.}
 %Source for i7 density: http://www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html
@@ -687,7 +688,7 @@ These vacuum tubes, due to the excess heat they created, were extremely unreliab
 \end{figure}
 
 
-However, regular computers will soon reach the limit of how small these transistors can get. Current CPU architecture is based off of 14 nanometer transistors. The next generation of transistors will reach 10 nanometers. 
+However, regular computers will soon reach the limit of how small these transistors can get. Current CPU architecture is based off of 14 nanometer transistors. The next generation of transistors will reach 10 nanometers. \cite{Intel}
 %https://www.intel.com/content/dam/www/public/us/en/documents/technology-briefs/bohr-14nm-idf-2014-brief.pdf
  Computer scientists predict that transistors will reach their physical limit size sometime in the mid 2020's. This limit is due to the fact that the transistors are approaching the size of atoms\cite{ARSTech}.
 %https://arstechnica.com/gadgets/2016/07/itrs-roadmap-2021-moores-law/
@@ -713,9 +714,9 @@ The XOR gate, also known as the eXclusive OR gate. Unlike the OR gate, the XOR g
 	\caption{A sample setup using logic gates to add 2 numbers.}
 	\label{A sample setup to add two 3 digit binary numbers.}
 \end{figure}
-%TODO Cite
+%TODO Cite image
 
-The combination of these logical gates results a boolean table known as a Truth Table\cite{Surrey}. This allows for very low level instructions, such as STORE, LOAD, ADD, or COMPARE. See Figure 2 TODO above for a sample addition machine.
+The combination of these logical gates results a boolean table known as a Truth Table\cite{Surrey}. This allows for very low level instructions, such as STORE, LOAD, ADD, or COMPARE. See Figure 2 above for a sample addition machine.
 
 %https://youtu.be/F8U1d2Hqark?t=254
 These instructions can be used to address the data stored in RAM. The language used for these instructions is called `assembly language' or `machine code'\footnote{This language is referred to as a low-level language, while more common languages like Python, FORTRAN, C/C++, and Java are referred to as high-level languages. This refers to the logical distance between the syntax of the language and the machine language, along with the amount of abstraction used in the language.}.
@@ -728,10 +729,6 @@ The infamous Schr\"{o}dinger's cat experiment is performed as follows. Imagine a
 Just like the cat, as long as the qubit is unobserved, it exists in a quantum superposition both a 1 and a 0. As soon as the qubit is observed, though, it ``snaps'' to either a 1 or a 0. Another way of thinking about this is like a coin that is flipped and is  spinning in midair. At any point in the air, it is impossible to figure out if it is heads or tails. However, smashing a fist down on top of the coin will force it to go to either a heads or a tails orientation. But how does this help a quantum computer work faster than a regular computer?
 
 
-
-
-
-
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
 
@@ -739,13 +736,15 @@ Just like the cat, as long as the qubit is unobserved, it exists in a quantum su
 
 The operations of a computer can be compared to an office worker sitting at their desk. The storage (hard drive) is comparable to a file cabinet for long term storage. The Random Access Memory (RAM, also known as memory) is comparable to the top of the desk, where papers can be placed when they are being worked on. Finally, the CPU is comparable to the person sitting at the desk, actually performing the tasks. The person can only work on something on the top of their desk, as trying to read a piece of paper sitting in a file cabinet would be awkward and slow\footnote{Interestingly enough, trying to work on a paper while the paper is still in the file cabinet can be compared to a pagefile, where the CPU pulls data directly from storage.}. Therefore, the person pulls an item out of their file cabinet and places it on their desk. The desk can only hold so many papers, so when the desk runs out of room, some papers have to be put back into the file storage. 
 
+
+
+
+Similiarly to the desk analogy, a CPU instructs the hard drive to load certain pieces of information from the hard drive into the RAM. When the computer runs out of free memory, the CPU removes information from the RAM that isn't being used. Unlike the desk analogy, however, the CPU does not directly operate from the RAM. Instead, the CPU loads a small bit of information from the RAM into the register of the CPU. The register is a very small amount of extremely fast storage directly tied to the CPU. For example, an Intel i7 CPU has 64 bit, 80 bit, and 120 bit registers\footnote{Compare these register sizes to the RAM in an average desktop, which is measured in gigabytes.}. Once in the register, the bits go through the transistors discussed earlier, where the logical gates perform instructions based on the data going through them\cite{THPHYS}\cite{Explain}.
+
+
 %Source
 %http://www.explainthatstuff.com/quantum-computing.html
 
-
-Similiarly to the desk analogy, a CPU instructs the hard drive to load certain pieces of information from the hard drive into the RAM. When the computer runs out of free memory, the CPU removes information from the RAM that isn't being used. Unlike the desk analogy, however, the CPU does not directly operate from the RAM. Instead, the CPU loads a small bit of information from the RAM into the register of the CPU. The register is a very small amount of extremely fast storage directly tied to the CPU. For example, an Intel i7 CPU has 64 bit, 80 bit, and 120 bit registers\footnote{Compare these register sizes to the RAM in an average desktop, which is measured in gigabytes.}. Once in the register, the bits go through the transistors discussed earlier, where the logical gates perform instructions based on the data going through them. 
-
-%TODO CITE
 %SOURCE http://www.thphys.nuim.ie/staff/joost/TQM/QvC.html
 
 A classical computers ``bits'' can either store a 1 or a 0. This is relatively efficient, but storing an N-bit number requires N bits. In other words, storing a 64 bit value takes 64 bits, and storing a 256 bit value takes 256 bits. The transistors in the CPU only recognize the 2 states, and operate serially (in series) on each bit. 
@@ -887,27 +886,36 @@ In other words, even the NSA is concerned with the rise of quantum computing. Fu
 Many major organizations, such as Internet Service Providers (ISP's) and the NSA store user data in an encrypted (and currently secure) manner. The sole reason this data is secure is because of the reliance in standard encryption methods. If a quantum computer is developed by a malicious source (foreign or domestic), everyone's so-called "private" information is at imminent risk of being decoded and stolen. 
 
 \subsection{Blockchain and Cryptocurrencies}
-Yet another aspect of technology that would be affected with quantum computing is the use of blockchain for cryptocurrencies. Blockchain is a public peer-to-peer ledger to account for and validate transactions of a cryptocurrency, such as Bitcoin, Ethereum, and Monero. The ledger consists of all the user ID's (known as wallets), along with the respective balances in those wallets, and is maintained through computers on the network running powerful hardware to verify thousands of transactions per second. \cite{Bitcoin}. The security of cryptocurrencies relies on the assumption that no individual will ever control more than 50\% of the network. Once this happens, the majority control can be used maliciously. The ledger is maintained from a protocol called "Proof of Work", requiring miners to   \cite{Aggarwal}
+Yet another aspect of technology that would be affected with quantum computing is the use of blockchain for cryptocurrencies. Blockchain is a public peer-to-peer ledger to account for and validate transactions of a cryptocurrency, such as Bitcoin, Ethereum, and Monero. 
 
-%https://arxiv.org/abs/1710.10377
+The most common cryptocurrency is Bitcoin; however, almost all cryptocurrencies operate off of the same general principle\cite{Bitcoin}. 
+
+When Alice wants to transfer some amount of Bitcoin to Bob, the transaction information is stored in the ledger, which is a public record of all of the transactions that have occurred. The records include Alice and Bob's "wallet" ID's, as well as the the amount transferred. Groups of transactions are collected into a block. These blocks are chained together (hence the name), and then a "pointer" refers each block to the previous block. 
+
+Where do these blocks come from? They originate  from the maintainers of the ledger. Unlike a bank, where there is a central authority to confirm transactions, cryptocurrencies are decentralized. The maintainers of the ledger are known as `miners', which are computers with special hardware optimized for solving large amounts of math problems\cite{Aggarwal}. The goal of the miners is to plug in numbers into the SHA256 hashing algorithm to confirm the value of the hash. 
+
+The security of cryptocurrencies relies on the assumption that no individual will ever control more than 50\% of the network\cite{Futurism}. Once this happens, the majority control can be used maliciously in various ways, the most egregious being that an alternate history of transactions in the ledger could be passed off as truthful. This means that malicious parties could theoretically manipulate an entire currencies value, as well as steal currency from other users. 
+
+%Bitcoin threat paper
+%https://arxiv.org/pdf/1710.10377.pdf
 
 %Source of bitcoin
 %https://bitcoin.org/en/how-it-works
 
 %Source for BCN threat
-% https://futurism.com/bitcoins-security-quantum-computers/
+%futurism.com/bitcoins-security-quantum-computers/
 
 %Explanatnio for bitcoin
 %https://www.youtube.com/watch?v=t5JGQXCTe3c
 
 
 
-TODO keep expanding this. 
-
-
 \section{Conclusion}
-\IEEEPARstart{O}nce a reliable general purpose quantum computer is available, the face of mathematics will be changed forever. Math and science problems that would not have been possible before will now be able to be accomplished in mere seconds. But as with all new technology, there will always be drawbacks. 
+\IEEEPARstart{O}nce a reliable general purpose quantum computer is available, the face of mathematics will be changed forever. Math and science problems that would not have been possible before will now be able to be accomplished in mere seconds. Some benefits include the use of quantum computing for cryptanalysis to aid military intelligence, optimal route generation for logistics companies, and optimization of data retrieval for artificial intelligence. 
 
+But as with all new technology, there will always be drawbacks. These include the misuse of quantum computing to crack commonly used encryption methods as well as destroy the cryptocurrency economy.
+
+As an unknown author once said, "Computers are incredibly fast, powerful, and stupid. Humans are incredibly slow, innacurate, and brilliant. Together, they are powerful beyond imagination."
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
@@ -969,8 +977,7 @@ To figure out the total possible number of sacks, use a case by case scenario. E
 
 \section{Traveling Salesman NP Proof}
 A simple explanation behind this statement: To find the shortest route between a set of nodes $N_1,N_2,\cdots N_Q$ of size Q, start at any node $N_1$. At this point, $Q$ guesses have been checked. Now, there are $Q-1$ points left to try. After another point $N_2$ has been selected, $Q(Q-1)$ guesses have been attempted. After another point, the number of guesses goes to $Q(Q-1)(Q-2)$. This is increasing at a rate of $Q!$, which is a non-polynomial growth. 
-\section{}
-Insert Appendix text here
+
 % use section* for acknowledgment
 \ifCLASSOPTIONcompsoc
   % The Computer Society usually uses the plural form
@@ -981,7 +988,7 @@ Insert Appendix text here
 \fi
 
 
-The author would like to thank Dunkin Donuts, Reddit ELI5, and Wikipedia.
+The author would like to thank Dr Gaines Hubbel, for his amazing EH105 class, as well as the author's family and friends for proofreading. The author would also like to give a shoutout to Carrie, for her late night sanity checks. Furthermore, the author would like to thank Dunkin Donuts, Reddit ELI5, and Wikipedia, without which he would have no clue what he was talking about.
 
 
 % Can use something like this to put references on a page
@@ -1068,6 +1075,17 @@ The author would like to thank Dunkin Donuts, Reddit ELI5, and Wikipedia.
 	
 	\bibitem{Aggarwal}
 	D. Aggarwal, G. Brennen, T. Lee, M. Santha and M. Tomamichel, "Quantum attacks on Bitcoin, and how to protect against them", Arxiv.org, 2017. [Online]. Available: https://arxiv.org/abs/1710.10377. [Accessed: 26- Nov- 2017].
+	
+	
+	\bibitem{Futurism}
+	D. Galeon, "Experts: "Quantum computers will break Bitcoin security within 10 years"", Futurism, 2017. [Online]. Available: https://futurism.com/bitcoins-security-quantum-computers/. [Accessed: 26- Nov- 2017].
+
+
+	\bibitem{THPHYS}
+	"Quantum vs Classical Computation", Thphys.nuim.ie, 2017. [Online]. Available: http://www.thphys.nuim.ie/staff/joost/TQM/QvC.html. [Accessed: 26- Nov- 2017].
+	
+	\bibitem{Explain}
+	Woodford, Chris. (2012/2017) Quantum computing. Retrieved from http://www.explainthatstuff.com/quantum-computing.html. [Accessed (26- Nov- 2017)] 	
 \end{thebibliography}
 
 
