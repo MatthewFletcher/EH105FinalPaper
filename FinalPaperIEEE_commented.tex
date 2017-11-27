@@ -549,7 +549,7 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 % in the abstract or keywords.
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-With general purpose quantum computers on the verge of being invented in the next decade, some worry about what the effects these will have on society. Many secure operations nowadays are only secure due to the extreme difficulty in solving the math problems that they are built from. Two major examples are RSA Encryption and blockchain. RSA's security lies in prime factorization, and blockchain's security lies in the difficulty of its hashing algorithm.  Since the 1980's, the RSA Encryption algorithm has been used as a near foolproof method of encrypting sensitive data sent over the Internet. Furthermore, blockchain's use in cryptocurrencies is only secure due to the irreversable hashing algorithm used, which ensures the security of the individual accounts. This paper analyzes the effects of quantum computing on the NP applications of RSA Encryption and blockchain, as well as a few other applications in the modern world. 
+With general purpose quantum computers on the verge of being invented in the next decade, some worry about what the effects these will have on society. Because quantum computers operate off of rules that break the laws of modern physics, they are far more powerful at computing certain algorithsm. Many secure operations nowadays are only secure due to the extreme difficulty in solving the math problems that they are built from. Two common examples of these operations are RSA Encryption and blockchain. RSA's security lies in prime factorization, and blockchain's security lies in the difficulty of its hashing algorithm.  Since the 1980's, the RSA Encryption algorithm has been used as a near foolproof method of encrypting sensitive data sent over the Internet. Furthermore, blockchain's use in cryptocurrencies is only secure due to the irreversable hashing algorithm used, which ensures the security of the individual accounts. This paper analyzes the effects of quantum computing on the NP applications of RSA Encryption and blockchain, as well as a few other applications in the modern world. 
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -637,7 +637,7 @@ Cryptography, Encryption, Quantum computing, P vs NP, Prime Factorization, RSA, 
 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{I}{n} 1955, mathematician John Nash penned a letter to the National Security Agency that would change the face of computing forever\cite{NSA}. 
+\IEEEPARstart{I}{n 1955, mathematician} John Nash penned a letter to the National Security Agency that would change the face of computing forever\cite{NSA}. 
 %https://www.nsa.gov/news-features/declassified-documents/nash-letters/assets/files/nash_letters1.pdf. 
 In this letter, he presented a theory about the computational power required to find the solutions to various mathematical problems. In particular, he focused on the art of cryptography, and the length of time necessary to crack an encryption. Up to that point, computer scientists who created algorithms concentrated solely on the required time to solve a particular length of problem. Nash suggested that instead of fixating on the computational duration for a problem with a particular input length, scientists should consider the rate of growth of the problem resolution time given the length of the inputs grew at a linear rate. Furthermore, in lieu of computation time, scientists should focus on the number of computational steps\footnote{A computational step is the number of state changes that the machine processes  in carrying out the set of steps to solve the problem.} required to solve the problem.  The shape of this growth curve would help classify the difficulty of the problem. 
 
@@ -645,7 +645,7 @@ About 3 decades after Nash's letter, a theoretical physicist at MIT named Richar
 
 
 \section{Classifying P and NP Problems}
-\IEEEPARstart{T}{he rate} of growth of a problem's difficulty as its input lengths increase can vary drastically. For example, the addition of numbers is a problem with a characteristic of linear growth. Doubling the number of digits to be added results in approximately double the computation time. Therefore, these problems grow at a linear rate\footnote{Linear growth is still technically considered a polynomial growth of the form $n^k$ with $k=0$.}.  However, problems such as multiplication grow at a slightly faster pace. Doubling the length of the inputs results in a growth of $2^2$ times the number of computational steps. Tripling the length of the input  results in a growth of $3^2$ times the number of computational steps. This growth may be somewhat rapid, but can be expressed as a polynomial\footnote{A polynomial is an expression that can be written in the form $a_{n}x^{n}+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_{1}x+a_{0}$ }. The exponent of the growth rate is always constant. Polynomial growth can therefore be displayed as some combination of terms in the form $n^k$, where n is a variable and $k$ is a constant.
+\IEEEPARstart{T}{he rate} of growth of a problem's difficulty as its input lengths increase can vary drastically. For example, the difficulty of addition of numbers grows at a linear rate. Doubling the number of digits to be added results in approximately double the computation time. Therefore, these problems grow at a linear rate\footnote{Linear growth is still technically considered a polynomial growth of the form $n^k$ with $k=0$.}.  However, problems such as multiplication grow at a slightly faster pace. Doubling the length of the inputs results in a growth of $2^2$ times the number of computational steps. Tripling the length of the input  results in a growth of $3^2$ times the number of computational steps. This growth may be somewhat rapid, but can be expressed as a polynomial\footnote{A polynomial is an expression that can be written in the form $a_{n}x^{n}+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_{1}x+a_{0}$ }. The exponent of the growth rate is always constant. Polynomial growth can therefore be displayed as some combination of terms in the form $n^k$, where n is a variable and $k$ is a constant.
 
 Another type of problem is anything similar to cracking a password by brute force. For simplicity sake, assume the password is a PIN composed only of digits 0-9. In the worst case scenario, for a 1 digit PIN, the computer would take $10^1=10$ guesses. For a 2 digit PIN, the computer would take $10^2 = 100$ guesses. For a 4 digit pin, the computer would take $10^4=10\,000$ guesses. This is growing at a rate of $10^k$, where $k$ is some constant. This growth pattern is known as exponential growth, where the variable is in the exponent. The resultant curve is extremely sharp. For context, if a password was able to consist of any numbers, letters, or special characters on a standard US keyboard, with only an eight character password, the number of computational steps required skyrockets up to $82^8$, or 2 with fifteen zeros following. 
 
@@ -659,38 +659,41 @@ Mathematicians had been noticing problems with similar growth patterns in all di
 	\item $c_2$
 	\item $c_1+c_2$
 \end{itemize}
-This is only 3 iterations, which isn't terrible. Mathematically, the number of iterations required can be represented with the following expression, where $r$ is the number of sacks in the initial collection \footnote{See Appendix B for an explanation of the $\Comb{r}{k}$ notation}. $$\sum_{k=1}^{r} \Comb{r}{k}$$ 
+This is only 3 iterations, which seems rather tame. Mathematically, the number of iterations required can be represented with the following expression, where $r$ is the number of sacks in the initial collection \footnote{See Appendix B for an explanation of the $\Comb{r}{k}$ notation}. $$\sum_{k=1}^{r} \Comb{r}{k}$$ 
 
 However, the number of computational steps in this problem grows at an extremely fast rate. For 4 sacks in the initial collection, the number of iterations required jumps to $\sum_{k=1}^{4} \Comb{4}{k} = 15$. Doubling the length of the input quintupled the number of computational steps. Through the use of Pascal's Triangle, one can find that the required number of computational steps for an initial collection of $k$ sacks is $2^k-1$. For an idea of the rate of growth, a collection of 30 sacks would require over 1 billion computational steps. \\
 
-Yet another example of an NP problem is the factoring of a number into its prime factors. In his 1801 book \textit{Disquisitiones Arithmeticae}, TODO cite mathematician Frederick Gauss proved that any number has exactly 1 prime factorization. It is extremely easy to check if a given factorization for a number is correct (the multiplication of said numbers is a P-difficulty problem). However, in order to find the unique factorization for a number, the only method currently known is guessing and checking every single factor for that number. As the length of the target number grows, so does the length of computation time, but the computation time grows exponentially. As the growth of computation time is not of a polynomial form, the factorization problem is considered an NP-difficulty problem. In other words, a NP problem can only be solved with brute force, so given inputs of sufficient length, the problem can be considered for all practical purposes unsolvable.
+Yet another example of an NP problem is the factoring of a number into its prime factors. In his 1801 book \textit{Disquisitiones Arithmeticae}, mathematician Frederick Gauss proved that any number has exactly 1 prime factorization\cite{Britannica}. It is extremely easy to check if a given factorization for a number is correct (the multiplication of said numbers is a P-difficulty problem). However, in order to find the unique factorization for a number, the only method currently known is guessing and checking every single factor for that number. As the length of the target number grows, so does the length of computation time, but the computation time grows exponentially. As the growth of computation time is not of a polynomial form, the factorization problem is considered an NP-difficulty problem. In other words, a NP problem can only be solved with brute force, so given inputs of sufficient length, the problem can be considered for all practical purposes unsolvable.
 
 
 
 \section{Evolution of Computational Methods}
- \IEEEPARstart{T}{he phrase} ``with current methods'' is used throughout this paper, in the context of methods used to solve a problem. This term aligns with the use a theoretical computing device known as a Turing computer to solve a problem.  In 1936, English computer scientist and cryptologist Alan Turing proposed the idea of a computing machine that operates off of a memory tape with infinite length divided into discrete cells\cite{Turing}. Each cell contains a basic instruction. The reading head above the tape identifies the value of the cell on the memory tape, then moves the tape either to the left, to the right, or terminates the program. Although this may seem very simple, determining if an algorithm can be run on a Turing machine constitutes one of the most important problems in the field of computer science. A Turing computer is the most basic computer possible, taking in bits one at a time, and outputting a result based on the bit.  However, these computers do not exist, as they are solely a theoretical device to determine the difficulty of solving a problem on a standard computer. As the difficulty and number of computational steps for NP-type problems grows with non-polynomial growth, the computation time skyrockets to an unmanageable amount. However, this challenge will change with the introduction of quantum computers. 
+% \IEEEPARstart{T}{he phrase} ``with current methods'' is used throughout this paper, in the context of methods used to solve a problem. This term aligns with the use a theoretical computing device known as a Turing computer to solve a problem.  In 1936, English computer scientist and cryptologist Alan Turing proposed the idea of a computing machine that operates off of a memory tape with infinite length divided into discrete cells\cite{Turing}. Each cell contains a basic instruction. The reading head above the tape identifies the value of the cell on the memory tape, then moves the tape either to the left, to the right, or terminates the program. Although this may seem very simple, determining if an algorithm can be run on a Turing machine constitutes one of the most important problems in the field of computer science. A Turing computer is the most basic computer possible, taking in bits one at a time, and outputting a result based on the bit.  However, these computers do not exist, as they are solely a theoretical device to determine the difficulty of solving a problem on a standard computer. Their use lies in determining if a program can be written for a classical computer; if the program cannot be written for a Turing computer, then it cannot be written for a classical computer. According to the Church-Turing theorem, the Turing computer is able to solve all possible computer programs.
+ 
+ 
+% Because the difficulty and number of computational steps for NP-type problems grows with non-polynomial growth, the computation time skyrockets to an unmanageable amount. However, this challenge will change with the introduction of quantum computers. 
 
-Computers have evolved drastically over the decades. In first generation computers, or computer technology designed from 1939 to 1954, computers operated using vaccuum tubes. Even a basic computer with hardware specifications orders of magnitude weaker than a modern day pocket calculator would occupy an entire room, and cost hundreds of thousands of dollars\cite{URI}.
+\IEEEPARstart{C}{omputers have} evolved drastically over the decades. In first generation computers, or computer technology designed from 1939 to 1954, computers operated using vaccuum tubes. Even a basic computer with hardware specifications orders of magnitude weaker than a modern day pocket calculator would occupy an entire room, and cost hundreds of thousands of dollars\cite{URI}.
 
 
 
 %Source 
 %http://homepage.cs.uri.edu/faculty/wolfe/book/Readings/Reading03.htm
 %ELI5 https://www.reddit.com/r/explainlikeimfive/comments/2ax3k3/eli5_how_does_a_computer_actually_work_like_how/
-These vacuum tubes, due to the excess heat they created, were extremely unreliable and were prone to failure every few hours. See Fig. 1 for an example of a vacuum tube computer. Computers soon transitioned to using microswitches known as transistors.  Compared to the vacuum tubes, transistors could be packed far more densely into the same area. Due to Moore's law\footnote{Moore's law is based off of Intel co-founder Gordon Moore's observation that the density of transistors on microprocessors had approximately doubled every year since the early age of computers. Moore's law states that this trend will continue every year into the future.}, the processing power of computers grows at an exponential rate\cite{Moore}. Eventually, transistors were changed to a special type of transistor known as a MOSFET\footnote{Metal Oxide Semiconductor Field Effect Transistors}. These operate on the same underlying principle as a regular transistor, with a binary existance of a 1 or a 0 for on and off. Due to their low power usage, MOSFET's could be packed into extreme densities. Eventually, these transistors were integrated into the layers of silicon in the processing chip, which allowed the size of an individual transistor to be in the tens of nanometers\cite{Tom's}\footnote{For example, the Intel i7 Quad Core CPU packs 731 million transistors into a board only 0.63'' by 0.63''.}
+These vacuum tubes, due to the excess heat they created, were extremely unreliable and were prone to failure every few hours. See Fig. 1 for an example of a vacuum tube computer. Computers soon transitioned to using microswitches known as transistors.  Compared to the vacuum tubes, transistors could be packed far more densely into the same area. Due to Moore's law\footnote{Moore's law is based off of Intel co-founder Gordon Moore's observation that the density of transistors on microprocessors had approximately doubled every year since the early age of computers. Moore's law states that this trend will continue every year into the future.}, the processing power of computers grows at an exponential rate\cite{Moore}. Eventually, transistors were changed to a special type of transistor known as a MOSFET\footnote{Metal Oxide Semiconductor Field Effect Transistors}. These operate on the same underlying principle as a regular transistor, with a binary existance of a 1 or a 0 for on and off. Due to their low power usage, MOSFET's could be packed far more densely. Eventually, these transistors were integrated into the layers of silicon in the processing chip, which allowed the size of an individual transistor to be in the tens of nanometers\cite{Tom's}\footnote{For example, the Intel i7 Quad Core CPU packs 731 million transistors into a board only 0.63'' by 0.63''\cite{Tom's}.}
 %Source for i7 density: http://www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{eniacsvacuum}
-	\caption[]{An ENIACS computer, which operated off of vacuum tubes.}
+	\caption[]{An ENIACS computer, which operated off of vacuum tubes\cite{ENIACS}.}
 	\label{fig:eniacsvacuum}
 \end{figure}
 
 
 However, regular computers will soon reach the limit of how small these transistors can get. Current CPU architecture is based off of 14 nanometer transistors. The next generation of transistors will reach 10 nanometers. \cite{Intel}
 %https://www.intel.com/content/dam/www/public/us/en/documents/technology-briefs/bohr-14nm-idf-2014-brief.pdf
- Computer scientists predict that transistors will reach their physical limit size sometime in the mid 2020's. This limit is due to the fact that the transistors are approaching the size of atoms\cite{ARSTech}.
+ Computer scientists predict that transistors will reach their physical limit size sometime in the mid 2020's. This limit is due to the fact that the transistors are approaching the size of atoms\cite{ARSTech}. Because of this asymptote, computers can no longer use an increase of transistor density for an speed boost. Another approach has to be derived. 
 %https://arstechnica.com/gadgets/2016/07/itrs-roadmap-2021-moores-law/
 
 
@@ -710,10 +713,10 @@ The XOR gate, also known as the eXclusive OR gate. Unlike the OR gate, the XOR g
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{adder}
-	\caption{A sample setup using logic gates to add 2 numbers.}
-	\label{A sample setup to add two 3 digit binary numbers.}
+	\caption{A sample setup using logic gates to add 2 numbers\cite{Essence}.}
+	\label{ .}
 \end{figure}
-%TODO Cite image
+
 
 The combination of these logical gates results a boolean table known as a Truth Table\cite{Surrey}. This allows for very low level instructions, such as STORE, LOAD, ADD, or COMPARE. See Figure 2 above for a sample addition machine.
 
@@ -748,7 +751,7 @@ Similiarly to the desk analogy, a CPU instructs the hard drive to load certain p
 
 The bits in a classical computer have a value of 1 or 0. This is relatively efficient, but storing an N-bit number requires N bits. In other words, storing a 64 bit value takes 64 bits, and storing a 256 bit value takes 256 bits. The transistors in the CPU only recognize the 2 states, and operate serially (in series) on each bit. 
 
-A quantum computer, on the other hand, uses bits that exist in a state that is either a $|1\}$, a $|0\}$, or a superposition that can be represented with the expression $a|1\} + b|0\}$. The state of the bit can be expressed using complex vector addition, varying the values of $a$ and $b$. However, due to a quantum theory known as quantum entanglement, the state of 1 qubit affects the other qubits in the system. Two particles can be entangled even if they are separated by physical space. A very critical point about this: quantum computers do not measure the values of the individial qubits. Instead, they measure the ``correlations'', or interactions, between the qubits. Just like Schr\"{o}dinger's cat, as soon as the qubits themselves are observed, the system changes from its original state. The cutting link to success came when two computers scientists, David Deutsch and Richard Jozsa, determined an algorithm that allowed for a computer to deduce what the original state of the qubits was most likely to have been before observation. Think of it like a house of cards that cannot be observed without them falling into a pile. The Jozsa-Deutsch algorithm allows for a computer to determine the most likely original state of the cards. Although the exact original state cannot be determined in a single computational run, by running multiple computations, the computer can deduce what the most likely original state of the qubits was, which will result in the solution to the problem\cite{NIST}.
+A quantum computer, on the other hand, uses bits that exist in a state that is either a $|1\}$, a $|0\}$, or a superposition that can be represented with the expression $a|1\} + b|0\}$. The state of the bit can be expressed using complex vector addition, varying the values of $a$ and $b$. However, due to a quantum theory known as quantum entanglement, the state of 1 qubit affects the other qubits in the system. Two particles can be entangled even if they are separated by physical space. Due to the entanglement, the qubits allow for exponentially growing identification of bits. N qubits can represent $2^N$ classical bits. A very critical point about this: quantum computers do not measure the values of the individial qubits. Instead, they measure the ``correlations'', or interactions, between the qubits. Just like Schr\"{o}dinger's cat, as soon as the qubits themselves are observed, the system changes from its original state. The cutting link to success came when two computers scientists, David Deutsch and Richard Jozsa, determined an algorithm that allowed for a computer to deduce what the original state of the qubits was most likely to have been before observation. Think of it like a house of cards that cannot be observed without them falling into a pile. The Jozsa-Deutsch algorithm allows for a computer to determine the most likely original state of the cards. Although the exact original state cannot be determined in a single computational run, by running multiple computations, the computer can deduce what the most likely original state of the qubits was, which will result in the solution to the problem\cite{NIST}.
 
 %Algorithm link https://www.quantiki.org/wiki/deutsch-jozsa-algorithm
 
@@ -853,9 +856,9 @@ This ability is what makes a quantum computer so powerful. Instead of operating 
 
 
 \section{Effects of Quantum Computing}
-\IEEEPARstart{W}{hat} effects will the rise of a general purpose quantum computer have on real life applications?
+\IEEEPARstart{W}{hat} effects will the rise of a general purpose quantum computer have on real life applications? Several benefits are readily apparent, including military interception of foreign messages, optimization of route generation, and advancement of artificial intelligence. However, several drawbacks exist, the two most critical being encryption techniques and blockchain. 
 \subsection{Cryptography}
-The United States Military expresses a large amount of interest in quantum computing, primarily for its use in cryptanalysis, or code-breaking. Because quantum computers can analyze large numbers of bits simultaneously, they are excellent for problems that require brute force calculations. This allows for the breaking of coded messages from enemy intelligence, ultimately allowing for an advantage over the enemy to successfully complete a mission while saving lives. 
+The United States Military expresses a large amount of interest in quantum computing, primarily for its use in cryptanalysis, or code-breaking. Cracking a code is defined as an NP problem, as the difficulty of the problem increases exponentially as the length of the message grows. Because quantum computers can analyze large numbers of bits simultaneously, they are excellent for problems that require brute force calculations. This allows for the breaking of coded messages from enemy intelligence, ultimately allowing for an advantage over the enemy to successfully complete a mission while saving lives. 
 
 \subsection{Route Generation}
 Another use of quantum computing arises in finding the shortest route between a set of points. Imagine a door-to-door salesman, with a set of houses he has to visit. To find the most efficient route to visit all of these houses requires a brute force approach. Guessing a random route, as well as measuring the length of that route are both extremely easy problems, classified as P difficulty. However, determining the shortest route is considered an NP problem\footnote{See Appendix C }.
@@ -867,14 +870,21 @@ Logistics companies such as the United Postal Service (UPS) deliver millions of 
 
  
  \subsection{Artificial Intelligence}
-One highly important section of the field of quantum computing is its application in the field of artificial intelligence. According to IBM, one such application is "Making facets of artificial intelligence such as machine learning much more powerful when data sets are very large, such as in searching images or video." Machine learning (such as IBM's Watson) relies on searching a vast database of information to calculate results. Through the use of quantum computing, these database searches can be completed on orders of magnitude faster than would be possible with standard computing methods\cite{IBM}. The initial drawbacks for most usage would be the cost of the hardware, as well as developing the complex algorithms that can properly run on quantum-based hardware. However, as with most all first-generation hardware, the initial cost is astronomically high. If quantum computers follow anything like the path of classical computers' development, the price will soon drop, allowing companies to use quantum algorithms in the use of artificial intelligence, turning a high-cost item into a cost-effective alternative. 
+One highly important section of the field of quantum computing is its application in the field of artificial intelligence. According to IBM, one such application is "Making facets of artificial intelligence such as machine learning much more powerful when data sets are very large, such as in searching images or video."\cite{IBM} Machine learning (such as IBM's Watson) relies on searching a vast database of information to calculate results. As the size of the database increases, the length of time to search for the required information also increases. Through the use of quantum computing, these database searches can be completed on orders of magnitude faster than would be possible with standard computing methods\cite{IBM}. The initial drawbacks for most usage would be the cost of the hardware, as well as developing the complex algorithms that can properly run on quantum-based hardware. However, as with most all first-generation hardware, the initial cost is astronomically high. If quantum computers follow anything like the path of classical computers' development, the price will soon drop, allowing companies to use quantum algorithms in the use of artificial intelligence, turning a high-cost item into a cost-effective alternative. 
  %http://www.research.ibm.com/ibm-q/learn/quantum-computing-applications/
 
+The many benefits of quantum computing seem to point towards a positive outlook. However, as with any technology, there will always be drawbacks. 
  
 
 \subsection{RSA Encryption}
 
-As a shopper enters their credit card details for an online store website, the shopper is assured that their credit card details and other personal data are protected if the green lock icon is present in their browser. The only reason this lock icon has any significant value is thanks to two major factors: 1, Prime factorization is classified as an NP problem, and 2, the difficulty of cracking this encryption (known as RSA encryption) is extremely difficult and time consuming using current computation methods. In 1978, three computer scientists, Ron Rivest, Adi Shamir and Leonard Adleman, publicly released an encryption algorithm titled after their names, RSA \cite{RSA}. The basis of this asymmetric encryption technique\footnote{Please note that this is a highly simplified explanation of the encryption algorithm. To describe this in full detail would take far more in-depth explanations and mathematics than would be appropriate for this paper.} is two secret prime numbers (known as private keys) multiplied together to form a public key. To decrypt the message, the two original numbers must be known. Finding these original two numbers is only possible through repetitive brute force calculations\footnote{Although  some algorithms exist to reduce the work slightly using methods to eliminate groups of guesses, it is still a polynomial reduction on an exponential growth, which means the reduction is almost unnoticeable.}. For an idea of the size of these numbers, the public key length for most banking systems nowadays is over six hundred digits long\footnote{A 617 digit long public key is the key length for 2048 bit encryption.}\cite{Numberphile}. To complete these calculations with current  methods and computing technologies  would require somewhere on the order of 6.4 quadrillion years to try all possible combinations. 
+As a shopper enters their credit card details for an online store website, the shopper is assured that their credit card details and other personal data are protected if the green lock icon is present in their browser. The only reason this lock icon has any significant value is thanks to two major points: 
+
+1) Prime factorization is classified as an NP problem
+
+2) the difficulty of cracking this encryption (known as RSA encryption) is extremely difficult and time consuming using current computation methods. 
+
+In 1978, three computer scientists, Ron Rivest, Adi Shamir and Leonard Adleman, publicly released an encryption algorithm titled after their names, RSA \cite{RSA}. The basis of this asymmetric encryption technique\footnote{Please note that this is a highly simplified explanation of the encryption algorithm. To describe this in full detail would take far more in-depth explanations and mathematics than would be appropriate for this paper.} is two secret prime numbers (known as private keys) multiplied together to form a public key. To decrypt the message, the two original numbers must be known. Finding these original two numbers is only possible through repetitive brute force calculations\footnote{Although  some algorithms exist to reduce the work slightly using methods to eliminate groups of guesses, it is still a polynomial reduction on an exponential growth, which means the reduction is almost unnoticeable.}. For an idea of the size of these numbers, the public key length for most banking systems nowadays is over six hundred digits long\footnote{A 617 digit long public key is the key length for 2048 bit encryption.}\cite{Numberphile}. To complete these calculations with current  methods and computing technologies  would require somewhere on the order of 6.4 quadrillion years to try all possible combinations. 
 
 However, with quantum computing's parallel computation techniques, multiple factors can be tried simultaneously, cutting the time to crack an encryption drastically. This is not just a science fiction threat, though. Previously, a variant of RSA cryptography known as elliptic curve cryptography\footnote{Elliptic curve cryptography is an encryption method similar to RSA that uses discrete logarithms of elliptic curves to choose the private keys. However, it still operates off of the same principle, with a private key and a public key related to each other through irreversable complex mathematical algorithms.} was approved by the National Security Administration (NSA) as the minimum for encryption standards of private data. In August of 2017, the NSA released a statement about the threat from quantum computing:
 
@@ -882,16 +892,16 @@ However, with quantum computing's parallel computation techniques, multiple fact
 
 In other words, even the NSA is concerned with the rise of quantum computing. Furthermore, any data that is currently stored with non-post-quantum cryptography methods  will be subject to cracking within the next few decades at most. 
 
-Many major organizations, such as Internet Service Providers (ISP's) and the NSA store user data in an encrypted (and currently secure) manner. The sole reason this data is secure is because of the reliance in standard encryption methods. If a quantum computer is developed by a malicious source (foreign or domestic), everyone's so-called "private" information is at imminent risk of being decoded and stolen. 
+Many major organizations, such as Internet Service Providers (ISPs) and the NSA store user data in an encrypted (and currently secure) manner. The sole reason this data is secure is because of the reliance in standard encryption methods. If a quantum computer is developed by a malicious source (foreign or domestic), everyone's so-called "private" information is at imminent risk of being decoded and stolen. 
 
 \subsection{Blockchain and Cryptocurrencies}
-Yet another aspect of technology that would be affected with quantum computing is the use of blockchain for cryptocurrencies. Blockchain is a public peer-to-peer ledger to account for and validate transactions of a cryptocurrency, such as Bitcoin, Ethereum, and Monero. 
+Yet another aspect of technology that would be affected with quantum computing is the use of blockchain for cryptocurrencies. In technical terms, blockchain is a public peer-to-peer ledger to account for and validate transactions of a decentralized cryptocurrency, such as Bitcoin, Ethereum, and Monero. 
 
-The most common cryptocurrency is Bitcoin; however, almost all cryptocurrencies operate off of the same general principle\cite{Bitcoin}. 
+The most commonly used cryptocurrency is Bitcoin; however, almost all cryptocurrencies operate off of the same general principle\cite{Bitcoin}. 
 
 When Alice wants to transfer some amount of Bitcoin to Bob, the transaction information is stored in the ledger, which is a public record of all of the transactions that have occurred. The records include Alice and Bob's "wallet" ID's, as well as the the amount transferred. Groups of transactions are collected into a block. These blocks are chained together (hence the name), and then a "pointer" refers each block to the previous block. 
 
-Where do these blocks come from? They originate  from the maintainers of the ledger. Unlike a bank, where a central authority confirms transactions, cryptocurrencies are decentralized. The maintainers of the ledger are known as `miners', which are computers with special hardware optimized for solving large amounts of math problems\cite{Aggarwal}. The goal of the miners is to plug in numbers into the SHA256 hashing algorithm to confirm the value of the hash. 
+Where do these blocks come from? They originate  from the maintainers of the ledger. Unlike a bank, where a central authority confirms transactions, cryptocurrencies are decentralized. The maintainers of the ledger are known as `miners', which are computers with special hardware optimized for solving large amounts of math problems\cite{Aggarwal}. When Alice sends Bob a certain value of Bitcoin, this value is recorded in the public ledger. Other miners on the network run this information through a hashing algorithm known as SHA256. For example, if Alice sends Bob 2 bitcoin, a value would be added to the ledger saying something like ALICE-2 BOB+2. At this point, anyone could theoretically change the value of 2 Bitcoin to any value desired\footnote{Note that the actual value added to the ledger is far more complicated. This is just a psuedocode explanation of the general process.}. Therefore, the value added to the ledger is hashed. Hashing is an algorithm that gives a standard size output for any size input, where even a slight change in the input results in a drastically different ouput. For reasons beyond the scope of this paper, miners must plug in random values into the hashing algorithm to verify the output. Once a majority of miners agree on the output, that value is set in stone as the correct value. 
 
 The security of cryptocurrencies relies on the assumption that no individual will ever control more than 50\% of the network\cite{Futurism}. Once this happens, the majority control can be used maliciously in various ways, the most egregious being that an alternate history of transactions in the ledger could be passed off as truthful. This means that malicious parties could theoretically manipulate an entire currencies value, as well as steal currency from other users. 
 
@@ -1021,70 +1031,106 @@ The author would like to thank Dr Gaines Hubbel, for his amazing EH105 class, as
 % set second argument of \begin to the number of references
 
 \begin{thebibliography}{1}
-	
 	\bibitem{NSA}
 	Nsa.gov. (n.d.). NSA Declassified Documents. [online] Available at: www.nsa.gov/news-features/declassified-documents/nash-letters/assets/files/nash\_letters1.pdf [Accessed 25 Nov. 2017].
-	
-	\bibitem{Numberphile}
-	Encryption and HUGE numbers. Youtube: Numberphile, 2012
-	
-	\bibitem{Turing}
-	A. Hodges, "Alan Turing", Plato.stanford.edu, 2017. [Online]. Available: plato.stanford.edu/entries/turing/. [Accessed: 25- Nov- 2017].
-	
+
+	\bibitem{Britannica}
+	"Theorem of Prime Factorization", Encyclopedia Britannica, 2017. [Online]. Available: https://www.britannica.com/topic/fundamental-theorem-of-arithmetic. [Accessed: 27- Nov- 2017].
 	
 	\bibitem{URI}
 	"History of Computers", Homepage.cs.uri.edu, 2017. [Online]. Available: homepage.cs.uri.edu/faculty/wolfe/book/Readings/Reading03.htm. [Accessed: 25- Nov- 2017].
 	
+	
+	\bibitem{Moore}
+	S. Shankland, "Moore's Law: The rule that really matters in tech", CNET, 2017. [Online]. Available: www.cnet.com/news/moores-law-the-rule-that-really-matters-in-tech/. [Accessed: 25- Nov- 2017].	
+	
+	\bibitem{Tom's}
+	"Computer History 101: The Development Of The PC", www.tomshardware.com, 2011. [Online]. Available: www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html, [Accessed: 25-Nov-2017]	
+	
+	
 	\bibitem{Intel}
 	"14nm Process Technology: Opening New Horizons", Intel Developer Forum, San Francisco, CA, 2017.
 	
-	\bibitem{Moore}
-	S. Shankland, "Moore's Law: The rule that really matters in tech", CNET, 2017. [Online]. Available: www.cnet.com/news/moores-law-the-rule-that-really-matters-in-tech/. [Accessed: 25- Nov- 2017].
-	
-	\bibitem{IBM}
-	"Quantum computing applications - IBM Q - US", Research.ibm.com, 2017. [Online]. Available: www.research.ibm.com/ibm-q/learn/quantum-computing-applications/. [Accessed: 25- Nov- 2017].
-	
-	\bibitem{Tom's}
-	"Computer History 101: The Development Of The PC", www.tomshardware.com, 2011. [Online]. Available: www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html, [Accessed: 25-Nov-2017]
-	
-	\bibitem{NIST}
-	Paul E. Black, "Deutsch-Jozsa algorithm", in Dictionary of Algorithms and Data Structures [online], Vreda Pieterse and Paul E. Black, eds. 17 December 2004. (accessed 25-Nov-2017) Available from: www.nist.gov/dads/HTML/deutschJozsaAlgo.html
-	
+	\bibitem{ENIACS}
+	Computer History Museum, ENIACS Tube Change. 2017.
+
+
+	\bibitem{ARSTech}
+	S. Anthony, "Transistors will stop shrinking in 2021, but Moore’s law will live on", ARSTechnica, 2017. [Online]. Available: arstechnica.com/gadgets/2016/07/itrs-roadmap-2021-moores-law/. [Accessed: 25- Nov- 2017].
+
 	\bibitem{Surrey}
 	W. Sangosanya, "Basic Logic Gates", Ee.surrey.ac.uk, 2017. [Online]. Available: www.ee.surrey.ac.uk/Projects/CAL/digital-logic/gatesfunc/. [Accessed: 25- Nov- 2017].
 	
-	\bibitem{NatGeo}
-	M. Kramer, "The Physics Behind Schrödinger's Cat Paradox", News.nationalgeographic.com, 2017. [Online]. Available: news.nationalgeographic.com/news/2013/08/130812-physics-schrodinger-erwin-google-doodle-cat-paradox-science/. [Accessed: 25- Nov- 2017].
-	
-	
-	\bibitem{RSA}
-	G. Simmons, "Rivest-Shamir-Adleman encryption", Encyclopedia Britannica, 2017. [Online]. Available: www.britannica.com/topic/RSA-encryption. [Accessed: 25- Nov- 2017].
-	
-	\bibitem{ARSTech}
-	S. Anthony, "Transistors will stop shrinking in 2021, but Moore’s law will live on", ARSTechnica, 2017. [Online]. Available: arstechnica.com/gadgets/2016/07/itrs-roadmap-2021-moores-law/. [Accessed: 25- Nov- 2017].
-	
-	\bibitem{Information}
-	"Information Assurance--Suite B Cryptography", Nsa.gov,2017. [Online]. Available: www.nsa.gov/ia/programs/suiteb\_cryptography/index.shtml. [Accessed: 26- Nov- 2017].
-	
-	\bibitem{Bitcoin}
-	"How does Bitcoin work? - Bitcoin", Bitcoin.org, 2017. [Online]. Available: https://bitcoin.org/en/how-it-works. [Accessed: 26- Nov- 2017].
-	
-	\bibitem{Fast}
-	D. Zax, "Brown Down: UPS Drivers Vs. The UPS Algorithm", Fast Company, 2017. [Online]. Available: www.fastcompany.com/3004319/brown-down-ups-drivers-vs-ups-algorithm. [Accessed: 26- Nov- 2017].
-	
-	\bibitem{Aggarwal}
-	D. Aggarwal, G. Brennen, T. Lee, M. Santha and M. Tomamichel, "Quantum attacks on Bitcoin, and how to protect against them", Arxiv.org, 2017. [Online]. Available: https://arxiv.org/abs/1710.10377. [Accessed: 26- Nov- 2017].
-	
-	
-	\bibitem{Futurism}
-	D. Galeon, "Experts: "Quantum computers will break Bitcoin security within 10 years"", Futurism, 2017. [Online]. Available: https://futurism.com/bitcoins-security-quantum-computers/. [Accessed: 26- Nov- 2017].
+	\bibitem{Essence}
+	Frame of Essence, Building the Bits and Qubits. 2017.
 
+
+	\bibitem{NatGeo}
+	M. Kramer, "The Physics Behind Schrödinger's Cat Paradox", News.nationalgeographic.com, 2017. [Online]. Available: news.nationalgeographic.com/news/2013/08/130812-physics-schrodinger-erwin-google-doodle-cat-paradox-science/. [Accessed: 25- Nov- 2017].	
 
 	\bibitem{THPHYS}
 	"Quantum vs Classical Computation", Thphys.nuim.ie, 2017. [Online]. Available: http://www.thphys.nuim.ie/staff/joost/TQM/QvC.html. [Accessed: 26- Nov- 2017].
 	
 	\bibitem{Explain}
-	Woodford, Chris. (2012/2017) Quantum computing. Retrieved from http://www.explainthatstuff.com/quantum-computing.html. [Accessed (26- Nov- 2017)] 	
+	Woodford, Chris. (2012/2017) Quantum computing. Retrieved from http://www.explainthatstuff.com/quantum-computing.html. [Accessed (26- Nov- 2017)] 		
+	
+	\bibitem{Fast}
+	D. Zax, "Brown Down: UPS Drivers Vs. The UPS Algorithm", Fast Company, 2017. [Online]. Available: www.fastcompany.com/3004319/brown-down-ups-drivers-vs-ups-algorithm. [Accessed: 26- Nov- 2017].
+	
+
+	\bibitem{IBM}
+	"Quantum computing applications - IBM Q - US", Research.ibm.com, 2017. [Online]. Available: www.research.ibm.com/ibm-q/learn/quantum-computing-applications/. [Accessed: 25- Nov- 2017].
+
+
+	
+	\bibitem{RSA}
+	G. Simmons, "Rivest-Shamir-Adleman encryption", Encyclopedia Britannica, 2017. [Online]. Available: www.britannica.com/topic/RSA-encryption. [Accessed: 25- Nov- 2017].
+
+	
+	\bibitem{Numberphile}
+	Encryption and HUGE numbers. Youtube: Numberphile, 2012
+
+	\bibitem{Information}
+	"Information Assurance--Suite B Cryptography", Nsa.gov,2017. [Online]. Available: www.nsa.gov/ia/programs/suiteb\_cryptography/index.shtml. [Accessed: 26- Nov- 2017].
+
+	\bibitem{Bitcoin}
+	"How does Bitcoin work? - Bitcoin", Bitcoin.org, 2017. [Online]. Available: https://bitcoin.org/en/how-it-works. [Accessed: 26- Nov- 2017].
+	
+	\bibitem{Aggarwal}
+	D. Aggarwal, G. Brennen, T. Lee, M. Santha and M. Tomamichel, "Quantum attacks on Bitcoin, and how to protect against them", Arxiv.org, 2017. [Online]. Available: https://arxiv.org/abs/1710.10377. [Accessed: 26- Nov- 2017].
+	
+		
+	\bibitem{Futurism}
+	D. Galeon, "Experts: "Quantum computers will break Bitcoin security within 10 years"", Futurism, 2017. [Online]. Available: https://futurism.com/bitcoins-security-quantum-computers/. [Accessed: 26- Nov- 2017].
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Unordered below here
+
+	
+	
+	
+
+
+	
+	\bibitem{NIST}
+	Paul E. Black, "Deutsch-Jozsa algorithm", in Dictionary of Algorithms and Data Structures [online], Vreda Pieterse and Paul E. Black, eds. 17 December 2004. (accessed 25-Nov-2017) Available from: www.nist.gov/dads/HTML/deutschJozsaAlgo.html
+	
+
+	
+%	\bibitem{Turing}
+%	A. Hodges, "Alan Turing", Plato.stanford.edu, 2017. [Online]. Available: plato.stanford.edu/entries/turing/. [Accessed: 25- Nov- 2017].
+	
+
+
+
+
+
+	
+		
+
+	
+
 \end{thebibliography}
 
 
