@@ -650,7 +650,7 @@ About 3 decades after Nash's letter, a theoretical physicist at MIT named Richar
 Another type of problem is anything similar to cracking a password by brute force. For simplicity sake, assume the password is a PIN composed only of digits 0-9. In the worst case scenario, for a 1 digit PIN, the computer would take $10^1=10$ guesses. For a 2 digit PIN, the computer would take $10^2 = 100$ guesses. For a 4 digit pin, the computer would take $10^4=10\,000$ guesses. This is growing at a rate of $10^k$, where $k$ is some constant. This growth pattern is known as exponential growth, where the variable is in the exponent. The resultant curve is extremely sharp. For context, if a password was able to consist of any numbers, letters, or special characters on a standard US keyboard, with only an eight character password, the number of computational steps required skyrockets up to $82^8$, or 2 with fifteen zeros following. 
 
 Mathematicians had been noticing problems with similar growth patterns in all different fields of math and science. So in 1971, mathematicians Stephen Cook and Leonid Levin formulated one of the most famous Millenium Prize Problems\footnote{The Millenium Prize problems are 7 unsolved math problems from throughout mathematical history. The Clay Mathematics Institute will award one million dollars to the first confirmed proof of each problem.} in all of mathematics: the P vs NP problem.
-\subsection{P-Type problems} The first type is known as a problem with difficulty P. To find the largest number in a list of numbers, a computer must iterate through each element in the list of numbers one time\footnote{For each element in the list, check if it's larger than the previous element. If it is, store that value as the largest value.}. Assume this uses $n$ computational steps. If the length of the list is doubled, the computer must go through $2n$ steps, or double the number of steps, in order to determine the largest element in the list. Tripling the length results in $3n$ computational steps. Therefore, increasing the list from $n$ elements to $k\cdot n $ elements will result in having to use $k$ times the number of computational steps\footnote{A sample Python script that does this calculation is in Appendix A.}. This increase results in a linear growth. By computer standards, this is considered a slow growth. Mathematicians decided to classify these problems as type P problems, as they could be solved in  \textbf{P}olynomial time. Not only are these problems easy to solve, but they are also easy to confirm if a potential solution is correct. 
+\subsection{P-Type problems} The first type is known as a problem with difficulty P. To find the largest number in a list of numbers, a computer must iterate through each element in the list one time\footnote{For each element in the list, check if it's larger than the previous element. If it is, store that value as the largest value.}. Assume this uses $n$ computational steps. If the length of the list is doubled, the computer must go through $2n$ steps, or double the number of steps, in order to determine the largest element in the list. Tripling the length results in $3n$ computational steps. Therefore, increasing the list from $n$ elements to $k\cdot n $ elements will result in having to use $k$ times the number of computational steps\footnote{A sample Python script that does this calculation is in Appendix A.}. This increase results in a linear growth. By computer standards, this is considered a slow growth. Mathematicians decided to classify these problems as type P problems, as they could be solved in  \textbf{P}olynomial time. Not only are these problems easy to solve, but they are also easy to confirm if a potential solution is correct. 
 
 \subsection{NP-type Problems}
  ``Nondeterministic Polynomial time problems'' (also known as NP problems) are not only difficult to solve, but also easy to check a solution to in polynomial time\footnote{``Easy'' and ``difficult'' in this case mean that they are respectively solvable and not solvable by a computer in a reasonable amount of time.}. One of the most common examples of an NP problem is finding a subset of a list that satisfies a given requirement. This is often referred to as the hackey-sack problem. If someone is presented with a collection of small sacks with specified random weights, and then asked to find a subset of those sacks that result in a given weight, the only way to approach this problem with current computational methods is a brute force algorithm, guessing a random subset, and checking the result. Unlike the P-type problem of finding the largest number in a list, the number of computational steps required for this problem results in a much faster growth. Assume that initially, just 2 sacks are given. Call these $c_1$ and $c_2$. To figure out which combination yields the correct answer, one must try the following combinations:
@@ -680,7 +680,7 @@ Yet another example of an NP problem is the factoring of a number into its prime
 %Source 
 %http://homepage.cs.uri.edu/faculty/wolfe/book/Readings/Reading03.htm
 %ELI5 https://www.reddit.com/r/explainlikeimfive/comments/2ax3k3/eli5_how_does_a_computer_actually_work_like_how/
-These vacuum tubes, due to the excess heat they created, were extremely unreliable and were prone to failure every few hours. See Fig. 1 for an example of a vacuum tube computer. Computers soon transitioned to using microswitches known as transistors.  Compared to the vacuum tubes, transistors could be packed far more densely into the same area. Due to Moore's law\footnote{Moore's law is based off of Intel co-founder Gordon Moore's observation that the density of transistors on microprocessors had approximately doubled every year since the early age of computers. Moore's law states that this trend will continue every year into the future.}, the processing power of computers grows at an exponential rate\cite{Moore}. Eventually, transistors were changed to a special type of transistor known as a MOSFET\footnote{Metal Oxide Semiconductor Field Effect Transistors}. These operate on the same underlying principle as a regular transistor, with a binary existance of a 1 or a 0 for on and off. Due to their low power usage, MOSFET's could be packed far more densely. Eventually, these transistors were integrated into the layers of silicon in the processing chip, which allowed the size of an individual transistor to be in the tens of nanometers\cite{Tom's}\footnote{For example, the Intel i7 Quad Core CPU packs 731 million transistors into a board only 0.63'' by 0.63''\cite{Tom's}.}
+These vacuum tubes, due to the excess heat they created, were extremely unreliable and were prone to failure every few hours. See Fig. 1 for an example of a vacuum tube computer. Computers soon transitioned to using microswitches known as transistors.  Compared to the vacuum tubes, transistors could be packed far more densely into the same area.  Soon enough, however, these transistors hit their limits. Due to the high power usage per transistor, they could only be so small before the electricity running through them resulted in intereference with the neighboring transistors. Eventually, transistors were changed to a special type of transistor known as a MOSFET\footnote{Metal Oxide Semiconductor Field Effect Transistors}. These operate on the same underlying principle as a regular transistor, with a binary existance of a 1 or a 0 for on and off. Due to their low power usage, MOSFET's could be packed far more densely. Eventually, these transistors were integrated into the layers of silicon in the processing chip, which allowed the size of an individual transistor to be in the tens of nanometers\cite{Tom's}\footnote{For example, the Intel i7 Quad Core CPU packs 731 million transistors into a board only 0.63'' by 0.63''\cite{Tom's}.}. According to Moore's law\footnote{Moore's law is based off of Intel co-founder Gordon Moore's observation that the density of transistors on microprocessors had approximately doubled every year since the early age of computers. Moore's law states that this trend will continue every year into the future.}, the area density (and therefore processing power) of computers grows at an exponential rate, doubling each year\cite{Moore}.
 %Source for i7 density: http://www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html
 
 \begin{figure}
@@ -691,7 +691,7 @@ These vacuum tubes, due to the excess heat they created, were extremely unreliab
 \end{figure}
 
 
-However, regular computers will soon reach the limit of how small these transistors can get. Current CPU architecture is based off of 14 nanometer transistors. The next generation of transistors will reach 10 nanometers. \cite{Intel}
+However, regular computers will soon reach the limit of how small these specialized transistors can get. Current CPU architecture is based off of 14 nanometer transistors. The next generation of transistors will reach 10 nanometers. \cite{Intel}
 %https://www.intel.com/content/dam/www/public/us/en/documents/technology-briefs/bohr-14nm-idf-2014-brief.pdf
  Computer scientists predict that transistors will reach their physical limit size sometime in the mid 2020's. This limit is due to the fact that the transistors are approaching the size of atoms\cite{ARSTech}. Because of this asymptote, computers can no longer use an increase of transistor density for an speed boost. Another approach has to be derived. 
 %https://arstechnica.com/gadgets/2016/07/itrs-roadmap-2021-moores-law/
@@ -700,7 +700,7 @@ However, regular computers will soon reach the limit of how small these transist
 \subsection{How Transistors Run A Computer}
 How does a microscopic electronic component that can only be in 2 states operate a device that can perform billions of calculations per second? A transistor is a switch that can either be on or off to represent a 1 or a 0, respectively\footnote{Most computers use a 5V charge to signal an ON, and a 0V charge to signal an OFF \cite{Surrey}
 	%http://www.ee.surrey.ac.uk/Projects/CAL/digital-logic/gatesfunc/
-}. It will exist in exactly one of these states at any given time (in other words, a transistor cannot exist in a quasi-on state). One transistor by itself cannot do much. However, combining the transistors can result in extremely powerful calculations. The 3 base transistors form logical gates known as AND, OR,and NOT.  For an AND gate, the input is a pair of bits, and the output is a single bit. When both input bits are on, the output is is on, but otherwise, the output is off. Another type of gate is the OR gate. This has 2 inputs and 1 output. If either of the inputs is true, or both are true, the output is true. Only if both are false is the output false. 
+}. It will exist in exactly one of these states at any given time (in other words, a transistor cannot exist in a quasi-on state). One transistor by itself cannot do much. However, combining the transistors can result in extremely powerful calculations. Combining these transistors forms logical gates known as AND, OR,and NOT.  For an AND gate, the input is a pair of bits, and the output is a single bit. When both input bits are on, the output is is on, but otherwise, the output is off. Another type of gate is the OR gate. This has 2 inputs and 1 output. If either of the inputs is true, or both are true, the output is true. Only if both are false is the output false. 
 
 For a NOT gate, the input is a single bit and the output is also a single bit. The output is simply the opposite of the input. 
 %Source http://www.electronics-tutorials.ws/logic/logic_5.html
@@ -728,7 +728,7 @@ A quantum computer operates uses a slightly different principle. Instead of oper
 
 The infamous Schr\"{o}dinger's cat experiment is performed as follows. Imagine a living cat inside a sealed bunker, with a sealed beaker of radioactive material, a Geiger counter attached to a hammer, and a small piece of radioactive material. As radioactive decay is a random process, the material has a 50\% chance of having one of its atoms decay in the next hour (which would set off the Geiger counter, smashing the hammer into the vial of gas and releasing it into the bunker, killing the cat). As long as the bunker is sealed and unobserved, the cat has a 50\% chance of being dead and a 50\% chance of being alive. When the bunker is opened, however, the cat must either be dead or alive. The instant before the bunker is opened, the cat exists in a quantum superposition of both dead and alive\cite{NatGeo}. 
 
-Just like the cat, as long as the qubit is unobserved, it exists in a quantum superposition both a 1 and a 0. As soon as the qubit is observed, though, it ``snaps'' to either a 1 or a 0. Another way of thinking about this is like a coin that is flipped and is  spinning in midair. At any point in the air, it is practically impossible to figure out if the orientation of the coin is heads or tails. However, smashing a fist down on top of the coin will force it to go to either a heads or a tails orientation. But how does this help a quantum computer work faster than a regular computer?
+Just like the cat, as long as the qubit is unobserved, it exists in a quantum superposition both a 1 and a 0. As soon as the qubit is observed, it ``snaps'' to either a 1 or a 0. Another way of thinking about this is like a coin that is flipped and is  spinning in midair. At any point in the air, it is practically impossible to figure out if the orientation of the coin is heads or tails. However, smashing a fist down on top of the coin will force it to go to either a heads or a tails orientation. But how does this help a quantum computer work faster than a regular computer?
 
 
 % needed in second column of first page if using \IEEEpubid
@@ -870,7 +870,9 @@ Logistics companies such as the United Postal Service (UPS) deliver millions of 
 
  
  \subsection{Artificial Intelligence}
-One highly important section of the field of quantum computing is its application in the field of artificial intelligence. According to IBM, one such application is "Making facets of artificial intelligence such as machine learning much more powerful when data sets are very large, such as in searching images or video."\cite{IBM} Machine learning (such as IBM's Watson) relies on searching a vast database of information to calculate results. As the size of the database increases, the length of time to search for the required information also increases. Through the use of quantum computing, these database searches can be completed on orders of magnitude faster than would be possible with standard computing methods\cite{IBM}. The initial drawbacks for most usage would be the cost of the hardware, as well as developing the complex algorithms that can properly run on quantum-based hardware. However, as with most all first-generation hardware, the initial cost is astronomically high. If quantum computers follow anything like the path of classical computers' development, the price will soon drop, allowing companies to use quantum algorithms in the use of artificial intelligence, turning a high-cost item into a cost-effective alternative. 
+One highly important section of the field of quantum computing is its application in the field of artificial intelligence. According to IBM, one such application is "Making facets of artificial intelligence such as machine learning much more powerful when data sets are very large, such as in searching images or video."\cite{IBM} Machine learning (such as IBM's Watson) relies on searching a vast database of information to calculate results. As the size of the database increases, the length of time to search for the required information also increases. Through the use of quantum computing, these database searches can be completed on orders of magnitude faster than would be possible with standard computing methods\cite{IBM}. 
+
+The initial drawbacks for most usage would be the cost of the hardware, as well as developing the complex algorithms that can properly run on quantum-based hardware. However, as with most all first-generation hardware, the initial cost is astronomically high. If quantum computers follow anything like the path of classical computers' development, the price will soon drop, allowing companies to use quantum algorithms in the use of artificial intelligence, turning a high-cost item into a cost-effective alternative. 
  %http://www.research.ibm.com/ibm-q/learn/quantum-computing-applications/
 
 The many benefits of quantum computing seem to point towards a positive outlook. However, as with any technology, there will always be drawbacks. 
@@ -920,7 +922,7 @@ The security of cryptocurrencies relies on the assumption that no individual wil
 
 
 \section{Conclusion}
-\IEEEPARstart{O}nce a reliable general purpose quantum computer is available, the face of mathematics will be changed forever. Math and science problems that would not have been possible before will now be able to be accomplished in mere seconds. Some benefits include the use of quantum computing for cryptanalysis to aid military intelligence, optimal route generation for logistics companies, and optimization of data retrieval for artificial intelligence. 
+\IEEEPARstart{O}{nce a reliable} general purpose quantum computer is available, the face of mathematics will be changed forever. Math and science problems that would not have been possible before will now be able to be accomplished in mere seconds. Some benefits include the use of quantum computing for cryptanalysis to aid military intelligence, optimal route generation for logistics companies, and optimization of data retrieval for artificial intelligence. 
 
 But as with all new technology, there will always be drawbacks. These include the misuse of quantum computing to both crack commonly used encryption methods and destroy the cryptocurrency economy.
 
@@ -1040,13 +1042,13 @@ The author would like to thank Dr Gaines Hubbel, for his amazing EH105 class, as
 	\bibitem{URI}
 	"History of Computers", Homepage.cs.uri.edu, 2017. [Online]. Available: homepage.cs.uri.edu/faculty/wolfe/book/Readings/Reading03.htm. [Accessed: 25- Nov- 2017].
 	
+	\bibitem{Tom's}
+	"Computer History 101: The Development Of The PC", www.tomshardware.com, 2011. [Online]. Available: www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html, [Accessed: 25-Nov-2017]	
 	
 	\bibitem{Moore}
 	S. Shankland, "Moore's Law: The rule that really matters in tech", CNET, 2017. [Online]. Available: www.cnet.com/news/moores-law-the-rule-that-really-matters-in-tech/. [Accessed: 25- Nov- 2017].	
 	
-	\bibitem{Tom's}
-	"Computer History 101: The Development Of The PC", www.tomshardware.com, 2011. [Online]. Available: www.tomshardware.com/reviews/upgrade-repair-pc,3000-2.html, [Accessed: 25-Nov-2017]	
-	
+
 	
 	\bibitem{Intel}
 	"14nm Process Technology: Opening New Horizons", Intel Developer Forum, San Francisco, CA, 2017.
@@ -1072,7 +1074,11 @@ The author would like to thank Dr Gaines Hubbel, for his amazing EH105 class, as
 	"Quantum vs Classical Computation", Thphys.nuim.ie, 2017. [Online]. Available: http://www.thphys.nuim.ie/staff/joost/TQM/QvC.html. [Accessed: 26- Nov- 2017].
 	
 	\bibitem{Explain}
-	Woodford, Chris. (2012/2017) Quantum computing. Retrieved from http://www.explainthatstuff.com/quantum-computing.html. [Accessed (26- Nov- 2017)] 		
+	Woodford, Chris. (2012/2017) Quantum computing. Retrieved from http://www.explainthatstuff.com/quantum-computing.html. [Accessed (26- Nov- 2017)] 	
+	
+
+	\bibitem{NIST}
+	Paul E. Black, "Deutsch-Jozsa algorithm", in Dictionary of Algorithms and Data Structures [online], Vreda Pieterse and Paul E. Black, eds. 17 December 2004. (accessed 25-Nov-2017) Available from: www.nist.gov/dads/HTML/deutschJozsaAlgo.html	
 	
 	\bibitem{Fast}
 	D. Zax, "Brown Down: UPS Drivers Vs. The UPS Algorithm", Fast Company, 2017. [Online]. Available: www.fastcompany.com/3004319/brown-down-ups-drivers-vs-ups-algorithm. [Accessed: 26- Nov- 2017].
@@ -1113,8 +1119,6 @@ The author would like to thank Dr Gaines Hubbel, for his amazing EH105 class, as
 
 
 	
-	\bibitem{NIST}
-	Paul E. Black, "Deutsch-Jozsa algorithm", in Dictionary of Algorithms and Data Structures [online], Vreda Pieterse and Paul E. Black, eds. 17 December 2004. (accessed 25-Nov-2017) Available from: www.nist.gov/dads/HTML/deutschJozsaAlgo.html
 	
 
 	
